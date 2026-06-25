@@ -61,14 +61,16 @@
       padding: 20px 0 24px;
     }
 
-    .hero-icon {
-      font-size: 52px;
-      margin-bottom: 8px;
-    }
+    .hero-icon { font-size: 52px; margin-bottom: 8px; }
 
-    .hero p {
+    .hero p { font-size: 13px; color: #888; }
+
+    .loading-msg {
+      text-align: center;
       font-size: 13px;
-      color: #888;
+      color: #aaa;
+      padding: 12px 0;
+      display: none;
     }
 
     .search-label {
@@ -113,13 +115,10 @@
       transition: opacity 0.15s;
     }
 
-    .search-btn:active { opacity: 0.8; }
+    .search-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .search-btn:active:not(:disabled) { opacity: 0.8; }
 
-    .search-hint {
-      font-size: 12px;
-      color: #aaa;
-      margin-top: 4px;
-    }
+    .search-hint { font-size: 12px; color: #aaa; margin-top: 4px; }
 
     .error-msg {
       font-size: 13px;
@@ -147,11 +146,7 @@
       padding: 16px;
     }
 
-    .store-id {
-      font-size: 12px;
-      color: #aaa;
-      margin-bottom: 2px;
-    }
+    .store-id { font-size: 12px; color: #aaa; margin-bottom: 2px; }
 
     .store-name {
       font-size: 18px;
@@ -168,12 +163,7 @@
     }
 
     .info-icon { font-size: 18px; flex-shrink: 0; }
-
-    .info-text {
-      font-size: 14px;
-      color: #333;
-      flex: 1;
-    }
+    .info-text { font-size: 14px; color: #333; flex: 1; }
 
     .copy-btn {
       background: #fff;
@@ -188,16 +178,9 @@
       transition: all 0.15s;
     }
 
-    .copy-btn.copied {
-      color: #27ae60;
-      border-color: #27ae60;
-    }
+    .copy-btn.copied { color: #27ae60; border-color: #27ae60; }
 
-    .divider {
-      border: none;
-      border-top: 1px solid #e8e8e8;
-      margin: 16px 0;
-    }
+    .divider { border: none; border-top: 1px solid #e8e8e8; margin: 16px 0; }
 
     .nav-btn {
       width: 100%;
@@ -218,7 +201,6 @@
 
     .nav-btn:last-child { margin-bottom: 0; }
     .nav-btn:active { opacity: 0.8; }
-
     .nav-maps { background: #1a1a2e; color: #fff; }
     .nav-waze { background: #33ccff; color: #1a1a2e; }
   </style>
@@ -231,12 +213,13 @@
     <h1>🏪 Localizador de loja</h1>
   </div>
 
-  <!-- TELA 1: busca -->
   <div class="screen active" id="screen-search">
     <div class="hero">
       <div class="hero-icon">🔍</div>
       <p>Encontre qualquer loja pelo ID</p>
     </div>
+
+    <p class="loading-msg" id="loading-msg">⏳ Carregando lojas...</p>
 
     <label class="search-label" for="id-input">Encontre uma loja pelo ID</label>
     <div class="search-row">
@@ -247,13 +230,12 @@
         placeholder="Digite o ID da loja"
         inputmode="numeric"
       />
-      <button class="search-btn" onclick="buscar()">Buscar</button>
+      <button class="search-btn" id="search-btn" onclick="buscar()">Buscar</button>
     </div>
-    <p class="search-hint">Ex: 52</p>
+    <p class="search-hint" id="search-hint">Ex: 52</p>
     <p class="error-msg" id="error-msg">❌ Loja não encontrada. Verifique o ID e tente novamente.</p>
   </div>
 
-  <!-- TELA 2: resultado -->
   <div class="screen" id="screen-result">
     <p class="result-label">Resultado da busca</p>
     <div class="store-card">
@@ -286,32 +268,33 @@
 </div>
 
 <script>
-  // ============================================================
-  // LISTA DE LOJAS
-  // Para adicionar uma nova loja, copie o bloco abaixo e cole
-  // antes do fechamento da chave }; — substituindo os dados.
-  //
-  //   NUMERO_DO_ID: { nome: 'Nome da Loja', end: 'Endereço completo', tel: '(XX) XXXX-XXXX' },
-  //
-  // Exemplo:
-  //   53: { nome: 'Centro', end: 'Rua dos Andradas, 1234, Porto Alegre', tel: '(51) 3333-0001' },
-  // ============================================================
-
-  const lojas = {
-    52: { nome: 'Cristal', end: 'Av. Wenceslau Escobar, 2409, Porto Alegre', tel: '(54) 9962-4634' },
-
-    // ADICIONE NOVAS LOJAS AQUI, seguindo o formato acima:
-
-  };
-
-  // ============================================================
-  // Não é necessário alterar nada abaixo desta linha
-  // ============================================================
-
+  let lojas = {};
   let lojaAtual = null;
 
+  // Busca o arquivo lojas.json assim que a página carrega
+  async function carregarLojas() {
+    const btn = document.getElementById('search-btn');
+    const loadingMsg = document.getElementById('loading-msg');
+    const hint = document.getElementById('search-hint');
+
+    btn.disabled = true;
+    loadingMsg.style.display = 'block';
+    hint.style.display = 'none';
+
+    try {
+      const resposta = await fetch('lojas.json');
+      if (!resposta.ok) throw new Error('Arquivo não encontrado');
+      lojas = await resposta.json();
+      loadingMsg.style.display = 'none';
+      hint.style.display = 'block';
+      btn.disabled = false;
+    } catch (e) {
+      loadingMsg.textContent = '❌ Erro ao carregar lojas. Verifique o arquivo lojas.json.';
+    }
+  }
+
   function buscar() {
-    const id = parseInt(document.getElementById('id-input').value.trim());
+    const id = document.getElementById('id-input').value.trim();
     const err = document.getElementById('error-msg');
     err.style.display = 'none';
 
@@ -377,6 +360,8 @@
   document.getElementById('id-input').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') buscar();
   });
+
+  carregarLojas();
 </script>
 
 </body>
