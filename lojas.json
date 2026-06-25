@@ -1,4 +1,137 @@
 {
-  "52": { "nome": "Cristal", "end": "Av. Wenceslau Escobar, 2409, Porto Alegre", "tel": "(51) 3268-4706" },
-  "129": { "nome": "Cristal", "end": "Av. Wenceslau Escobar, 1509, Porto Alegre", "tel": "(51) 98060-9157" }
+  "2": {
+    "nome": "Centro Histórico",
+    "end": "Rua dos Andradas, 1665, Porto Alegre",
+    "tel": "(51) 3226-3107"
+  },
+  "52": {
+    "nome": "Cristal",
+    "end": "Av. Wenceslau Escobar, 2409, Porto Alegre",
+    "tel": "(51) 3268-4706"
+  },
+  "72": {
+    "nome": "Hospital de Clinicas",
+    "end": "Rua Ramiro Barcelos, 2350, Porto Alegre",
+    "tel": "(51) 3388-4752"
+  },
+  "77": {
+    "nome": "Medianeira",
+    "end": "Av. Doutor Carlos Barbosa, 761, Porto Alegre",
+    "tel": "(51) 3233-5177"
+  },
+  "80": {
+    "nome": "Vila Nova",
+    "end": "Av. Monte Cristo, 406, Porto Alegre",
+    "tel": "(51) 3261-3497"
+  },
+  "83": {
+    "nome": "Cristal",
+    "end": "Rua Doutor Campos Velho, 950, Porto Alegre",
+    "tel": "(51) 3516-2736"
+  },
+  "84": {
+    "nome": "Cristal",
+    "end": "Av. Chui, 380, Porto Alegre",
+    "tel": "(51) 99613-6654"
+  },
+  "85": {
+    "nome": "Hipica",
+    "end": "Av. Edgar Pires de Castro, 2745, Porto Alegre",
+    "tel": "(51) 3080-2603"
+  },
+  "90": {
+    "nome": "Gloria",
+    "end": "Av. Prof. Oscar Pereira, 2979, Porto Alegre",
+    "tel": "(51) 3516-3506"
+  },
+  "91": {
+    "nome": "Vila João Pessoa",
+    "end": "Rua Tenente Alpoim, 15, Porto Alegre",
+    "tel": "(51) 3080-1482"
+  },
+  "93": {
+    "nome": "Bom Fim",
+    "end": "Av. Osvaldo Aranha, 1300, Porto Alegre",
+    "tel": "(51) 3237-1133"
+  },
+  "94": {
+    "nome": "Cristal",
+    "end": "Rua Coronel Massot, 666, Porto Alegre",
+    "tel": "(51) 3080-2041"
+  },
+  "97": {
+    "nome": "Santana",
+    "end": "Rua Gomes Jardim, 261, Porto Alegre",
+    "tel": "(51) 3080-1980"
+  },
+  "100": {
+    "nome": "Rio Branco",
+    "end": "Rua Quintino Bocaiúva, 1669, Porto Alegre",
+    "tel": "(51) 3080-2352"
+  },
+  "102": {
+    "nome": "Petrópolis",
+    "end": "Av. Protásio Alves, 3919, Porto Alegre",
+    "tel": "(51) 3080-2380"
+  },
+  "103": {
+    "nome": "Petrópolis",
+    "end": "Av. Ipiranga, 3756, Porto Alegre",
+    "tel": "(51) 3080-2390"
+  },
+  "104": {
+    "nome": "Rio Branco",
+    "end": "Av. Protasio Alves, 1094, Porto Alegre",
+    "tel": "(51) 3080-2391"
+  },
+  "105": {
+    "nome": "Menino Deus",
+    "end": "Rua José de Alencar, 915, Porto Alegre",
+    "tel": "(51)3080-2316"
+  },
+  "106": {
+    "nome": "Sanatana",
+    "end": "Rua Santana, 1340, Porto Alegre",
+    "tel": "(51) 3080-2658"
+  },
+  "107": {
+    "nome": "Petrópolis",
+    "end": "Av. Protásio Alves, 3017, Porto Alegre",
+    "tel": "(51) 3080-2582"
+  },
+  "108": {
+    "nome": "Três Figueiras",
+    "end": "Rua Luiz Voelcker, 281, Porto Alegre",
+    "tel": "(51) 3080-2377"
+  },
+  "111": {
+    "nome": "Cristal",
+    "end": "Av. Padre Cacique, 2893, Porto Alegre",
+    "tel": "(51) 3080-2638"
+  },
+  "119": {
+    "nome": "Santana",
+    "end": "Rua Vicente da Fontoura, 1441, Porto Alegre",
+    "tel": "(51) 4042-9625"
+  },
+  "122": {
+    "nome": "Medianeira",
+    "end": "Rua General Gomes Carneiro, 188, Porto Alegre",
+    "tel": "(51)99879-0021"
+  },
+  "126": {
+    "nome": "Azenha",
+    "end": "Av. Ipiranga, 1801, Porto Alegre",
+    "tel": "(51) 99841-7510"
+  },
+  "129": {
+    "nome": "Cristal",
+    "end": "Av. Wenceslau Escobar, 1509, Porto Alegre",
+    "tel": "(51) 98060-9157"
+  },
+  "131": {
+    "nome": "Rio Branco",
+    "end": "Av. Protasio Alves, 290, Porto Alegre",
+    "tel": "(51) 3335-0100"
+  }
 }
