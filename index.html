@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Localizador de Loja</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0f0f0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 16px;
+    }
+
+    .app {
+      width: 100%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+    }
+
+    .header {
+      background: #1a1a2e;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 62px;
+    }
+
+    .header h1 {
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      flex: 1;
+    }
+
+    .back-btn {
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+
+    .screen { display: none; padding: 24px 20px; }
+    .screen.active { display: block; }
+
+    .hero {
+      text-align: center;
+      padding: 20px 0 24px;
+    }
+
+    .hero-icon {
+      font-size: 52px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .search-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #222;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .search-row {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 11px 14px;
+      font-size: 15px;
+      font-family: inherit;
+      color: #222;
+      background: #fafafa;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .search-input:focus { border-color: #1a1a2e; background: #fff; }
+
+    .search-btn {
+      background: #1a1a2e;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 20px;
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: opacity 0.15s;
+    }
+
+    .search-btn:active { opacity: 0.8; }
+
+    .search-hint {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    .error-msg {
+      font-size: 13px;
+      color: #c0392b;
+      margin-top: 10px;
+      display: none;
+      padding: 10px 12px;
+      background: #fdecea;
+      border-radius: 8px;
+    }
+
+    .result-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: #888;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .store-card {
+      background: #f8f8f8;
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .store-id {
+      font-size: 12px;
+      color: #aaa;
+      margin-bottom: 2px;
+    }
+
+    .store-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 14px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .info-icon { font-size: 18px; flex-shrink: 0; }
+
+    .info-text {
+      font-size: 14px;
+      color: #333;
+      flex: 1;
+    }
+
+    .copy-btn {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      color: #555;
+      font-family: inherit;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+
+    .copy-btn.copied {
+      color: #27ae60;
+      border-color: #27ae60;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e8e8e8;
+      margin: 16px 0;
+    }
+
+    .nav-btn {
+      width: 100%;
+      padding: 13px;
+      border-radius: 10px;
+      border: none;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 8px;
+      transition: opacity 0.15s;
+    }
+
+    .nav-btn:last-child { margin-bottom: 0; }
+    .nav-btn:active { opacity: 0.8; }
+
+    .nav-maps { background: #1a1a2e; color: #fff; }
+    .nav-waze { background: #33ccff; color: #1a1a2e; }
+  </style>
+</head>
+<body>
+
+<div class="app">
+
+  <div class="header" id="main-header">
+    <h1>🏪 Localizador de loja</h1>
+  </div>
+
+  <!-- TELA 1: busca -->
+  <div class="screen active" id="screen-search">
+    <div class="hero">
+      <div class="hero-icon">🔍</div>
+      <p>Encontre qualquer loja pelo ID</p>
+    </div>
+
+    <label class="search-label" for="id-input">Encontre uma loja pelo ID</label>
+    <div class="search-row">
+      <input
+        class="search-input"
+        id="id-input"
+        type="number"
+        placeholder="Digite o ID da loja"
+        inputmode="numeric"
+      />
+      <button class="search-btn" onclick="buscar()">Buscar</button>
+    </div>
+    <p class="search-hint">Ex: 52</p>
+    <p class="error-msg" id="error-msg">❌ Loja não encontrada. Verifique o ID e tente novamente.</p>
+  </div>
+
+  <!-- TELA 2: resultado -->
+  <div class="screen" id="screen-result">
+    <p class="result-label">Resultado da busca</p>
+    <div class="store-card">
+      <p class="store-id" id="res-id"></p>
+      <p class="store-name" id="res-name"></p>
+
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <span class="info-text" id="res-addr"></span>
+        <button class="copy-btn" id="copy-addr-btn" onclick="copiar('addr')">copiar</button>
+      </div>
+
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <span class="info-text" id="res-tel"></span>
+        <button class="copy-btn" id="copy-tel-btn" onclick="copiar('tel')">copiar</button>
+      </div>
+
+      <hr class="divider">
+
+      <button class="nav-btn nav-maps" onclick="abrirMapa('google')">
+        🗺️ Abrir no Google Maps
+      </button>
+      <button class="nav-btn nav-waze" onclick="abrirMapa('waze')">
+        🚗 Abrir no Waze
+      </button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ============================================================
+  // LISTA DE LOJAS
+  // Para adicionar uma nova loja, copie o bloco abaixo e cole
+  // antes do fechamento da chave }; — substituindo os dados.
+  //
+  //   NUMERO_DO_ID: { nome: 'Nome da Loja', end: 'Endereço completo', tel: '(XX) XXXX-XXXX' },
+  //
+  // Exemplo:
+  //   53: { nome: 'Centro', end: 'Rua dos Andradas, 1234, Porto Alegre', tel: '(51) 3333-0001' },
+  // ============================================================
+
+  const lojas = {
+    52: { nome: 'Cristal', end: 'Av. Wenceslau Escobar, 2409, Porto Alegre', tel: '(54) 9962-4634' },
+
+    // ADICIONE NOVAS LOJAS AQUI, seguindo o formato acima:
+
+  };
+
+  // ============================================================
+  // Não é necessário alterar nada abaixo desta linha
+  // ============================================================
+
+  let lojaAtual = null;
+
+  function buscar() {
+    const id = parseInt(document.getElementById('id-input').value.trim());
+    const err = document.getElementById('error-msg');
+    err.style.display = 'none';
+
+    if (!id || !lojas[id]) {
+      err.style.display = 'block';
+      return;
+    }
+
+    lojaAtual = { id, ...lojas[id] };
+    document.getElementById('res-id').textContent = 'ID: ' + id;
+    document.getElementById('res-name').textContent = lojaAtual.nome;
+    document.getElementById('res-addr').textContent = lojaAtual.end;
+    document.getElementById('res-tel').textContent = lojaAtual.tel;
+
+    resetCopyBtns();
+
+    document.getElementById('screen-search').classList.remove('active');
+    document.getElementById('screen-result').classList.add('active');
+
+    document.getElementById('main-header').innerHTML =
+      '<button class="back-btn" onclick="voltar()">← Voltar</button>' +
+      '<h1>Localizador de loja</h1>';
+  }
+
+  function voltar() {
+    document.getElementById('screen-result').classList.remove('active');
+    document.getElementById('screen-search').classList.add('active');
+    document.getElementById('id-input').value = '';
+    document.getElementById('error-msg').style.display = 'none';
+    document.getElementById('main-header').innerHTML =
+      '<h1>🏪 Localizador de loja</h1>';
+  }
+
+  function copiar(tipo) {
+    const texto = tipo === 'addr' ? lojaAtual.end : lojaAtual.tel;
+    const btnId = tipo === 'addr' ? 'copy-addr-btn' : 'copy-tel-btn';
+    navigator.clipboard.writeText(texto).catch(() => {});
+    const btn = document.getElementById(btnId);
+    btn.classList.add('copied');
+    btn.textContent = '✓ copiado';
+    setTimeout(() => {
+      btn.classList.remove('copied');
+      btn.textContent = 'copiar';
+    }, 2000);
+  }
+
+  function resetCopyBtns() {
+    document.getElementById('copy-addr-btn').classList.remove('copied');
+    document.getElementById('copy-addr-btn').textContent = 'copiar';
+    document.getElementById('copy-tel-btn').classList.remove('copied');
+    document.getElementById('copy-tel-btn').textContent = 'copiar';
+  }
+
+  function abrirMapa(app) {
+    if (!lojaAtual) return;
+    const query = encodeURIComponent(lojaAtual.end);
+    const url = app === 'google'
+      ? 'https://www.google.com/maps/search/?api=1&query=' + query
+      : 'https://waze.com/ul?q=' + query;
+    window.open(url, '_blank');
+  }
+
+  document.getElementById('id-input').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') buscar();
+  });
+</script>
+
+</body>
+</html>
