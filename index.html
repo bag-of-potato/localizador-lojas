@@ -295,34 +295,48 @@
 <script>
   // ============================================================
   // LISTA DE LOJAS
-  // Para adicionar uma nova loja, copie o bloco abaixo e cole
-  // antes do fechamento da chave }; — substituindo os dados.
-  //
-  //   NUMERO_DO_ID: { nome: 'Nome da Loja', end: 'Endereço completo', tel: '(XX) XXXX-XXXX' },
-  //
-  // Exemplo:
-  //   53: { nome: 'Centro', end: 'Rua dos Andradas, 1234, Porto Alegre', tel: '(51) 3333-0001' },
+  // Os dados das lojas vêm do arquivo lojas.json (carregado abaixo).
+  // Para adicionar uma loja, edite o lojas.json — não este arquivo.
   // ============================================================
 
-  const lojas = {
-    52: { nome: 'Cristal', end: 'Av. Wenceslau Escobar, 2409, Porto Alegre', tel: '(54) 9962-4634' },
-
-    // ADICIONE NOVAS LOJAS AQUI, seguindo o formato acima:
-
-  };
-
-  // ============================================================
-  // Não é necessário alterar nada abaixo desta linha
-  // ============================================================
-
+  let lojas = {};
+  let lojasCarregadas = false;
   let lojaAtual = null;
 
+  fetch('lojas.json')
+    .then(function(response) {
+      if (!response.ok) {
+        throw new Error('HTTP ' + response.status);
+      }
+      return response.json();
+    })
+    .then(function(data) {
+      lojas = data;
+      lojasCarregadas = true;
+    })
+    .catch(function(error) {
+      console.error('Erro ao carregar lojas.json:', error);
+      const err = document.getElementById('error-msg');
+      err.textContent = '⚠️ Não foi possível carregar os dados das lojas. Tente recarregar a página.';
+      err.style.display = 'block';
+    });
+
   function buscar() {
-    const id = parseInt(document.getElementById('id-input').value.trim());
+    const idInput = document.getElementById('id-input').value.trim();
     const err = document.getElementById('error-msg');
+    err.textContent = '❌ Loja não encontrada. Verifique o ID e tente novamente.';
     err.style.display = 'none';
 
-    if (!id || !lojas[id]) {
+    if (!lojasCarregadas) {
+      err.textContent = '⏳ Os dados ainda estão carregando, aguarde um instante e tente de novo.';
+      err.style.display = 'block';
+      return;
+    }
+
+    // As chaves do JSON são strings, então comparamos como string
+    const id = idInput.replace(/^0+/, '') || idInput;
+
+    if (!idInput || !lojas[id]) {
       err.style.display = 'block';
       return;
     }
