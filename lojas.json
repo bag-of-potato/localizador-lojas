@@ -4,25 +4,115 @@
     "end": "Rua dos Andradas, 1665, Porto Alegre",
     "tel": "(51) 3226-3107"
   },
+  "4": {
+    "nome": "São Geraldo",
+    "end": "Av. São Pedro, 549, Porto Alegre",
+    "tel": "(51) 3086-0546"
+  },
+  "9": {
+    "nome": "Centro Histórico",
+    "end": "Rua Prof. Annes Dias, 116 - Loja 01, Porto Alegre",
+    "tel": "(51) 3093-0879"
+  },
+  "10": {
+    "nome": "Centro Histórico",
+    "end": "Av. Independência, 1271 - Loja 01, Porto Alegre",
+    "tel": "(54) 99662-1906"
+  },
+  "13": {
+    "nome": "Camaqua",
+    "end": "Av. Otto Niemeyer, 651, Porto Alegre",
+    "tel": "(51) 3372-5090"
+  },
+  "14": {
+    "nome": "Cavalhada",
+    "end": "Av. Vicente Monteggia, 2837, Porto Alegre",
+    "tel": "(51) 3246-5687"
+  },
+  "21": {
+    "nome": "Cavalhada",
+    "end": "Av. Juca Batista, 510, Porto Alegre",
+    "tel": "(51) 3095-3002"
+  },
+  "27": {
+    "nome": "Aberta dos Morros",
+    "end": "Av. Edgar Píres de Castro, 1710, Porto Alegre",
+    "tel": "(54) 99695-8342"
+  },
+  "29": {
+    "nome": "Santana",
+    "end": "Rua São Luís, 726, Porto Alegre",
+    "tel": "(54) 99621-8099"
+  },
+  "36": {
+    "nome": "Cavalhada",
+    "end": "Av. Juca Batista, 1305, Porto Alegre",
+    "tel": "(51) 3012-9450"
+  },
+  "49": {
+    "nome": "Moinhos de Vento",
+    "end": "Rua 24 de Outubro, 676, Porto Alegre",
+    "tel": "(54) 99703-1287"
+  },
+  "50": {
+    "nome": "Ipanema",
+    "end": "Av. Tramandaí, 11, Porto Alegre",
+    "tel": "(54) 99672-8544"
+  },
   "52": {
     "nome": "Cristal",
     "end": "Av. Wenceslau Escobar, 2409, Porto Alegre",
     "tel": "(51) 3268-4706"
   },
+  "57": {
+    "nome": "Restinga",
+    "end": "Av. Economista Nilo Wulff, 215, Porto Alegre",
+    "tel": "(51) 3258-7226"
+  },
+  "71": {
+    "nome": "Independência",
+    "end": "Rua Castro Alves, 667, Porto Alegre",
+    "tel": "(51) 3268-7465"
+  },
   "72": {
     "nome": "Hospital de Clinicas",
     "end": "Rua Ramiro Barcelos, 2350, Porto Alegre",
-    "tel": "(51) 3388-4752"
+    "tel": "(51) 99763-4890"
+  },
+  "75": {
+    "nome": "Hípica",
+    "end": "Av. Edgar Pires de Castro, 25, Porto Alegre",
+    "tel": "(51) 99525-7288"
+  },
+  "76": {
+    "nome": "Sarandi",
+    "end": "Av. Ecoville, 855, Porto Alegre",
+    "tel": "(51) 3340-0061"
   },
   "77": {
     "nome": "Medianeira",
     "end": "Av. Doutor Carlos Barbosa, 761, Porto Alegre",
     "tel": "(51) 3233-5177"
   },
+  "78": {
+    "nome": "Mario Quintana",
+    "end": "Estr. Martim Félix Berta, 1831, Porto Alegre",
+    "tel": "(51) 99951-0058"
+  },
   "80": {
     "nome": "Vila Nova",
     "end": "Av. Monte Cristo, 406, Porto Alegre",
     "tel": "(51) 3261-3497"
+  },
+  "81": {
+    "nome": "Vila Jardim",
+    "end": "Av. Saturnino de Brito, 61, Porto Alegre",
+    "tel": "(51) 99526-4829"
+  },
+  "82": {
+    "nome": "Lomba do Pinheiro",
+    "end": "Estr. São Francisco, 10, Porto Alegre",
+    "tel": "(54) 99934-5529"
   },
   "83": {
     "nome": "Cristal",
@@ -38,6 +128,16 @@
     "nome": "Hipica",
     "end": "Av. Edgar Pires de Castro, 2745, Porto Alegre",
     "tel": "(51) 3080-2603"
+  },
+  "86": {
+    "nome": "São João",
+    "end": "Av. Assis Brasil, 11, Porto Alegre",
+    "tel": "(51) 3080-1767"
+  },
+  "89": {
+    "nome": "Hípica",
+    "end": "Av. Juca Batista, 3771, Porto Alegre",
+    "tel": "(51) 3080-1480"
   },
   "90": {
     "nome": "Gloria",
@@ -59,6 +159,11 @@
     "end": "Rua Coronel Massot, 666, Porto Alegre",
     "tel": "(51) 3080-2041"
   },
+  "96": {
+    "nome": "Menino Deus",
+    "end": "Rua Barão do Gravataí, 531, Porto Alegre",
+    "tel": "(51) 3080-2040"
+  },
   "97": {
     "nome": "Santana",
     "end": "Rua Gomes Jardim, 261, Porto Alegre",
@@ -68,6 +173,11 @@
     "nome": "Rio Branco",
     "end": "Rua Quintino Bocaiúva, 1669, Porto Alegre",
     "tel": "(51) 3080-2352"
+  },
+  "101": {
+    "nome": "Chapéu do Sol",
+    "end": "Av. Juca Batista, 7030, Porto Alegre",
+    "tel": "(51) 99607-8133"
   },
   "102": {
     "nome": "Petrópolis",
@@ -104,6 +214,11 @@
     "end": "Rua Luiz Voelcker, 281, Porto Alegre",
     "tel": "(51) 3080-2377"
   },
+  "110": {
+    "nome": "Restinga",
+    "end": "Av. Edgar Pires de Castro, 4200, Porto Alegre",
+    "tel": "(51) 99534-4147"
+  },
   "111": {
     "nome": "Cristal",
     "end": "Av. Padre Cacique, 2893, Porto Alegre",
@@ -118,6 +233,11 @@
     "nome": "Medianeira",
     "end": "Rua General Gomes Carneiro, 188, Porto Alegre",
     "tel": "(51)99879-0021"
+  },
+  "124": {
+    "nome": "Menino Deus",
+    "end": "Rua Costa, 30, Porto Alegre",
+    "tel": "(51) 3035-4339"
   },
   "126": {
     "nome": "Azenha",
