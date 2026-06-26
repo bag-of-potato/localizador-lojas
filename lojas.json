@@ -14,6 +14,16 @@
     "end": "Av. São Pedro, 549, Porto Alegre",
     "tel": "(51) 3086-0546"
   },
+  "6": {
+    "nome": "Chácara das Pedras",
+    "end": "Avenida João Wallig, 1993, Porto Alegre",
+    "tel": "(51) 99618-5649"
+  },
+  "8": {
+    "nome": "Centro Histórico",
+    "end": "Av. Borges de Medeiros, 1151, Porto Alegre",
+    "tel": "(51) 3062-2759"
+  },
   "9": {
     "nome": "Centro Histórico",
     "end": "Rua Prof. Annes Dias, 116 - Loja 01, Porto Alegre",
@@ -33,6 +43,21 @@
     "nome": "Cavalhada",
     "end": "Av. Vicente Monteggia, 2837, Porto Alegre",
     "tel": "(51) 3246-5687"
+  },
+  "15": {
+    "nome": "Centro Histórico",
+    "end": "Rua dos Andradas, 985, Porto Alegre",
+    "tel": "(54) 99687-2084"
+  },
+  "16": {
+    "nome": "Cavalhada",
+    "end": "Av. da Cavalhada, 2221, Porto Alegre",
+    "tel": "(51) 3012-8118"
+  },
+  "18": {
+    "nome": "Jardim Itu",
+    "end": "Rua Adda Mascarenhas de Moraes, 299",
+    "tel": "(54) 99709-1634"
   },
   "19": {
     "nome": "Mont'Serrat",
@@ -54,6 +79,11 @@
     "end": "Av. Protásio Alves, 7401, Porto Alegre",
     "tel": "(54) 99960-1816"
   },
+  "23": {
+    "nome": "Cristo Redentor",
+    "end": "Av. Assis Brasil, 3277, Porto Alegre",
+    "tel": "(54) 99695-9698"
+  },
   "27": {
     "nome": "Aberta dos Morros",
     "end": "Av. Edgar Píres de Castro, 1710, Porto Alegre",
@@ -63,6 +93,11 @@
     "nome": "Santana",
     "end": "Rua São Luís, 726, Porto Alegre",
     "tel": "(54) 99621-8099"
+  },
+  "30": {
+    "nome": "Centro Histórico",
+    "end": "Rua dos Andradas, 1179",
+    "tel": "(54) 99244-9029"
   },
   "31": {
     "nome": "Centro Histórico",
@@ -74,6 +109,11 @@
     "end": "Av. Bento Gonçalves, 2893, Porto Alegre",
     "tel": "(51) 3336-5485"
   },
+  "35": {
+    "nome": "Menino Deus",
+    "end": "Av. Getúlio Vargas, 1470, Porto Alegre",
+    "tel": "(54) 99699-1277"
+  },
   "36": {
     "nome": "Cavalhada",
     "end": "Av. Juca Batista, 1305, Porto Alegre",
@@ -83,6 +123,26 @@
     "nome": "Passo d'Areia",
     "end": "Avenida Assis Brasil, 164, Porto Alegre",
     "tel": "(54) 99659-3643"
+  },
+  "41": {
+    "nome": "Cristo Redentor",
+    "end": "Av. Assis Brasil, 2840, Porto Alegre",
+    "tel": "(51) 4061-9707"
+  },
+  "42": {
+    "nome": "Vila Ipiranga",
+    "end": "Av. do Forte, 1968, Porto Alegre",
+    "tel": "(51) 3508-3941"
+  },
+  "45": {
+    "nome": "Belém Novo",
+    "end": "Rua Doutor Cecílio Monza, 11050, Porto Alegre",
+    "tel": "(54) 99700-2216"
+  },
+  "46": {
+    "nome": "Auxiliadora",
+    "end": "Rua Silva Jardim, 115, Porto Alegre",
+    "tel": "(54) 99686-7482"
   },
   "49": {
     "nome": "Moinhos de Vento",
@@ -94,15 +154,40 @@
     "end": "Av. Tramandaí, 11, Porto Alegre",
     "tel": "(54) 99672-8544"
   },
+  "51": {
+    "nome": "Sarandi",
+    "end": "Av. Assis Brasil, 6654, Porto Alegre",
+    "tel": "(51) 3022-5772"
+  },
   "52": {
     "nome": "Cristal",
     "end": "Av. Wenceslau Escobar, 2409, Porto Alegre",
     "tel": "(51) 3268-4706"
   },
+  "53": {
+    "nome": "Restinga",
+    "end": "Av. João Antonio Silveira, 1860, Porto Alegre",
+    "tel": "(54) 99927-9572"
+  },
+  "55": {
+    "nome": "Independência",
+    "end": "Av. Independência, 30, Porto Alegre",
+    "tel": "(51) 3226-4698"
+  },
+  "56": {
+    "nome": "Centro Histórico",
+    "end": "Rua Voluntários da Pátria, 9, Porto Alegre",
+    "tel": "(51) 3221-6888"
+  },
   "57": {
     "nome": "Restinga",
     "end": "Av. Economista Nilo Wulff, 215, Porto Alegre",
     "tel": "(51) 3258-7226"
+  },
+  "58": {
+    "nome": "Centro Histórico",
+    "end": "Rua Voluntários da Pátria, 387, Porto Alegre",
+    "tel": "(54) 99997-1565"
   },
   "59": {
     "nome": "Centro Histórico",
@@ -119,10 +204,25 @@
     "end": "Rua josé de Alencar, 215, Porto Alegre",
     "tel": "(54) 999700-5340"
   },
+  "63": {
+    "nome": "Lomba do Pinheiro",
+    "end": "Estrada João de Oliveira Remião, 6636, Porto Alegre",
+    "tel": "(54) 99665-0027"
+  },
+  "64": {
+    "nome": "Jardim Dona Leopoldina",
+    "end": "Estr. Martim Félix Berta, 557, Porto Alegre",
+    "tel": "(51) 3366-3050"
+  },
   "65": {
     "nome": "Petrópolis",
     "end": "Av. Carlos Gomes, 1723, Porto Alegre",
     "tel": "(51) 3334-5078"
+  },
+  "66": {
+    "nome": "Rubem Berta",
+    "end": "Av. Baltazar de Oliveira Garcia, 3362, Porto Alegre",
+    "tel": "(51) 3279-0969"
   },
   "71": {
     "nome": "Independência",
@@ -199,6 +299,16 @@
     "end": "Av. Assis Brasil, 11, Porto Alegre",
     "tel": "(51) 99980-6134"
   },
+  "87": {
+    "nome": "Sarandi",
+    "end": "Av. Faria Lobato, 509, Porto Alegre",
+    "tel": "(54) 99920-3630"
+  },
+  "88": {
+    "nome": "Vila Jardim",
+    "end": "Av. Ipê, 15, Porto Alegre",
+    "tel": "(54) 99911-9186"
+  },
   "89": {
     "nome": "Hípica",
     "end": "Av. Juca Batista, 3771, Porto Alegre",
@@ -214,6 +324,11 @@
     "end": "Rua Tenente Alpoin, 15, Porto Alegre",
     "tel": "(51) 99640-7290"
   },
+  "92": {
+    "nome": "Jardim Sabara",
+    "end": "Av. Alberto Pasqualini, 1200, Porto Alegre",
+    "tel": "(54) 99708-6174"
+  },
   "93": {
     "nome": "Bom Fim",
     "end": "Av. Osvaldo Aranha, 1300, Porto Alegre",
@@ -224,6 +339,11 @@
     "end": "Rua Coronel Massot, 666, Porto Alegre",
     "tel": "(51) 99653-4756"
   },
+  "95": {
+    "nome": "Humaitá",
+    "end": "Av. A. J. Renner, 1221, Porto Alegre",
+    "tel": "(51) 99648-3902"
+  },
   "96": {
     "nome": "Menino Deus",
     "end": "Rua Barão do Gravataí, 531, Porto Alegre",
@@ -233,6 +353,16 @@
     "nome": "Santana",
     "end": "Rua Gomes Jardim, 261, Porto Alegre",
     "tel": "(51) 99689-4081"
+  },
+  "98": {
+    "nome": "São Sebastião",
+    "end": "Av. Sertório, 6315, Porto Alegre",
+    "tel": "(51) 99954-6645"
+  },
+  "99": {
+    "nome": "Morro Santana",
+    "end": "Rua Emílio Keidan, 30, Porto Alegre",
+    "tel": "(51) 99754-3383"
   },
   "100": {
     "nome": "Rio Branco",
@@ -279,6 +409,11 @@
     "end": "Rua Luiz Voelcker, 281, Porto Alegre",
     "tel": "(51) 3080-2377"
   },
+  "109": {
+    "nome": "Rubem Berta",
+    "end": "Av. Bernardino Silveira Amorim, 1296, Porto Alegre",
+    "tel": "(51) 99539-8979"
+  },
   "110": {
     "nome": "Restinga",
     "end": "Av. Edgar Pires de Castro, 4200, Porto Alegre",
@@ -289,15 +424,40 @@
     "end": "Av. Padre Cacique, 2893, Porto Alegre",
     "tel": "(51) 99849-3834"
   },
+  "112": {
+    "nome": "Floresta",
+    "end": "Rua Santo Antônio, 663, Porto Alegre",
+    "tel": "(51) 99797-0382"
+  },
+  "113": {
+    "nome": "São Geraldo",
+    "end": "Av. Pernambuco, 2413, Porto Alegre",
+    "tel": "(51) 99569-1334"
+  },
   "114": {
     "nome": "Moinhos de Vento",
     "end": "Rua Padre Chagas, 205, Porto Alegre",
     "tel": "(51) 99627-4380"
   },
+  "115": {
+    "nome": "Sarandi",
+    "end": "Av. Francisco Silveira Bitencourt, 455, Porto Alegre",
+    "tel": "(51) 99614-6795"
+  },
+  "117": {
+    "nome": "Higienópolis",
+    "end": "Rua Cel. Feijó, 901, Porto Alegre",
+    "tel": "(51) 99526-1943"
+  },
   "119": {
     "nome": "Santana",
     "end": "Rua Vicente da Fontoura, 1441, Porto Alegre",
     "tel": "(51) 99878-0052"
+  },
+  "121": {
+    "nome": "Sarandi",
+    "end": "Av. Assis Brasil, 8489, Porto Alegre",
+    "tel": "(51) 99833-4338"
   },
   "122": {
     "nome": "Medianeira",
@@ -318,6 +478,11 @@
     "nome": "Cristal",
     "end": "Av. Wenceslau Escobar, 1509, Porto Alegre",
     "tel": "(51) 98060-9157"
+  },
+  "130": {
+    "nome": "Vila Ipiranga",
+    "end": "Rua Doutor João Simplício A. de Carvalho, 262, Porto Alegre",
+    "tel": "(51) 99880-2633"
   },
   "131": {
     "nome": "Rio Branco",
