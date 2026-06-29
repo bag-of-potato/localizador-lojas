@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1a5bbf">
   <title>Localizador de Loja</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -93,7 +94,7 @@
       border: 1px solid #ddd;
       border-radius: 8px;
       padding: 11px 14px;
-      font-size: 15px;
+      font-size: 16px;
       font-family: inherit;
       color: #222;
       background: #f0f0f0;
@@ -134,6 +135,15 @@
       border-radius: 8px;
     }
 
+    .loading-msg {
+      font-size: 13px;
+      color: #1a5bbf;
+      margin-top: 10px;
+      padding: 10px 12px;
+      background: #eef4fd;
+      border-radius: 8px;
+    }
+
     .result-label {
       font-size: 13px;
       font-weight: 500;
@@ -165,17 +175,21 @@
 
     .info-row {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
     }
 
-    .info-icon { font-size: 18px; flex-shrink: 0; }
+    .info-icon { font-size: 18px; flex-shrink: 0; line-height: 1.4; }
 
     .info-text {
       font-size: 14px;
       color: #333;
-      flex: 1;
+      flex: 1 1 140px;
+      min-width: 0;
+      word-break: break-word;
+      line-height: 1.4;
     }
 
     .copy-btn {
@@ -190,6 +204,7 @@
       font-family: inherit;
       white-space: nowrap;
       transition: all 0.15s;
+      flex-shrink: 0;
     }
 
     .copy-btn:active { opacity: 0.7; }
@@ -238,6 +253,14 @@
       line-height: 1.5;
       border-top: 1px solid #eee;
     }
+
+    @media (max-width: 360px) {
+      body { padding: 12px 8px; }
+      .screen { padding: 20px 16px; }
+      .header { padding: 16px; }
+      .store-card { padding: 14px; }
+      .nav-btn { font-size: 13px; padding: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -267,6 +290,7 @@
       <button class="search-btn" onclick="buscar()">Buscar</button>
     </div>
     <p class="search-hint">Ex: 52</p>
+    <p class="loading-msg" id="loading-msg">⏳ Carregando dados das lojas...</p>
     <p class="error-msg" id="error-msg">❌ Loja não encontrada. Verifique o ID e tente novamente.</p>
   </div>
 
@@ -326,20 +350,24 @@
       return response.json();
     })
     .then(function(data) {
+      if (!data || typeof data !== 'object') {
+        throw new Error('Formato de dados inválido');
+      }
       lojas = data;
       lojasCarregadas = true;
+      document.getElementById('loading-msg').style.display = 'none';
     })
     .catch(function(error) {
       console.error('Erro ao carregar lojas.json:', error);
+      document.getElementById('loading-msg').style.display = 'none';
       const err = document.getElementById('error-msg');
-      err.textContent = '⚠️ Não foi possível carregar os dados das lojas. Tente recarregar a página.';
+      err.textContent = '⚠️ Não foi possível carregar os dados das lojas. Verifique sua conexão e recarregue a página.';
       err.style.display = 'block';
     });
 
   function buscar() {
     const idInput = document.getElementById('id-input').value.trim();
     const err = document.getElementById('error-msg');
-    err.textContent = '❌ Loja não encontrada. Verifique o ID e tente novamente.';
     err.style.display = 'none';
 
     if (!lojasCarregadas) {
@@ -348,22 +376,42 @@
       return;
     }
 
-    // As chaves do JSON são strings, então comparamos como string
-    const id = idInput.replace(/^0+/, '') || idInput;
-
-    if (!idInput || !lojas[id]) {
+    if (!idInput) {
+      err.textContent = '✏️ Digite o ID da loja antes de buscar.';
       err.style.display = 'block';
       return;
     }
 
-    lojaAtual = { id, ...lojas[id] };
+    if (!/^\d+$/.test(idInput)) {
+      err.textContent = '❌ O ID deve conter apenas números.';
+      err.style.display = 'block';
+      return;
+    }
+
+    // As chaves do JSON são strings, então comparamos como string,
+    // removendo zeros à esquerda (ex: "052" -> "52")
+    const id = idInput.replace(/^0+/, '') || idInput;
+    const loja = lojas[id];
+
+    if (!loja) {
+      err.textContent = '❌ Loja não encontrada. Verifique o ID e tente novamente.';
+      err.style.display = 'block';
+      return;
+    }
+
+    // Proteção contra dados incompletos no JSON (ex: loja sem telefone)
+    const nome = loja.nome || 'Nome não informado';
+    const end = loja.end || 'Endereço não informado';
+    const tel = loja.tel || 'Telefone não informado';
+
+    lojaAtual = { id: id, nome: nome, end: end, tel: tel };
     document.getElementById('res-id').textContent = 'ID: ' + id;
-    document.getElementById('res-name').textContent = lojaAtual.nome;
-    document.getElementById('res-addr').textContent = lojaAtual.end;
-    document.getElementById('res-tel').textContent = lojaAtual.tel;
+    document.getElementById('res-name').textContent = nome;
+    document.getElementById('res-addr').textContent = end;
+    document.getElementById('res-tel').textContent = tel;
 
     // Atualiza os links de mapa/waze com o endereço atual
-    const query = encodeURIComponent(lojaAtual.end);
+    const query = encodeURIComponent(end);
     document.getElementById('btn-maps').href = 'https://www.google.com/maps/search/?api=1&query=' + query;
     document.getElementById('btn-waze').href = 'https://waze.com/ul?q=' + query + '&navigate=yes';
 
