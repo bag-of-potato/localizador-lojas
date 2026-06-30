@@ -9,6 +9,5 @@
 "theme_color": "#1a5bbf",
 "background_color": "#1a5bbf",
 "display": "standalone",
-"start_url": "/index.html",
-"scope": "./"
+"start_url": "/localizador-lojas/index.html"
 }
