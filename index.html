@@ -25,6 +25,7 @@
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 2px 16px rgba(0,0,0,0.10);
+      margin-bottom: 24px;
     }
 
     .header {
@@ -293,6 +294,8 @@
     <p class="loading-msg" id="loading-msg">⏳ Carregando dados das lojas...</p>
     <p class="error-msg" id="error-msg">❌ Loja não encontrada. Verifique o ID e tente novamente.</p>
   </div>
+</div>
+<div class="app">
 
   <!-- TELA 2: resultado -->
   <div class="screen" id="screen-result">
@@ -323,13 +326,14 @@
       </a>
     </div>
   </div>
+</div>
 
   <p class="disclaimer">
     Ferramenta não-oficial, criada para uso não comercial.
     Sem vínculo com as Farmácias São João. Dados consultados a partir do site oficial da empresa.
   </p>
 
-</div>
+
 
 <script>
   // ============================================================
@@ -417,21 +421,7 @@
 
     resetCopyBtns();
 
-    document.getElementById('screen-search').classList.remove('active');
     document.getElementById('screen-result').classList.add('active');
-
-    document.getElementById('main-header').innerHTML =
-      '<button class="back-btn" onclick="voltar()">← Voltar</button>' +
-      '<h1>Localizador de loja</h1>';
-  }
-
-  function voltar() {
-    document.getElementById('screen-result').classList.remove('active');
-    document.getElementById('screen-search').classList.add('active');
-    document.getElementById('id-input').value = '';
-    document.getElementById('error-msg').style.display = 'none';
-    document.getElementById('main-header').innerHTML =
-      '<h1>Localizador de loja</h1>';
   }
 
   function copiarTexto(texto) {
