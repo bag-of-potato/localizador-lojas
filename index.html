@@ -424,6 +424,7 @@
     resetCopyBtns();
 
     document.getElementById('screen-result').classList.add('active');
+    document.getElementById('search-input').value = '';
   }
 
   function copiarTexto(texto) {
@@ -483,7 +484,7 @@
     if (e.key === 'Enter') buscar();
   });
 
-  document.getElementById('search-input').value = '';
+
 </script>
 
 </body>
