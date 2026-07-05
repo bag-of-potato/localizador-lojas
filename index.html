@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#1a5bbf">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.json">
   <title>Localizador de Loja</title>
   <style>
@@ -430,7 +430,11 @@
 
     document.getElementById('id-input').value = '';
     document.getElementById('screen-result').classList.add('active');
+<<<<<<< HEAD
     
+=======
+    document.getElementById('search-input').value = '';
+>>>>>>> ace81a2f3f2f248cb0df2f95e6957f1a0a15cb90
   }
 
   function copiarTexto(texto) {
@@ -489,6 +493,8 @@
   document.getElementById('id-input').addEventListener('keydown', function(e) {
     if (e.key === 'Enter') buscar();
   });
+
+
 </script>
 
 </body>
