@@ -282,6 +282,9 @@
     </div>
 
     <label class="search-label" for="id-input">Encontre uma loja pelo ID</label>
+    <select id ="cidade-select">
+      <option value="Porto Alegre">Porto Alegre</option>
+    </select>
     <div class="search-row">
       <input
         class="search-input"
@@ -372,6 +375,7 @@
     });
 
   function buscar() {
+    const cidadeSelect = document.getElementById('cidade-select');
     const idInput = document.getElementById('id-input').value.trim();
     const err = document.getElementById('error-msg');
     err.style.display = 'none';
@@ -396,11 +400,12 @@
 
     // As chaves do JSON são strings, então comparamos como string,
     // removendo zeros à esquerda (ex: "052" -> "52")
+    const cidadeInput = cidadeSelect.value;
     const id = idInput.replace(/^0+/, '') || idInput;
-    const loja = lojas[id];
+    const loja = lojas[cidadeInput] && lojas[cidadeInput][id];
 
     if (!loja) {
-      err.textContent = '❌ Loja não encontrada. Verifique o ID e tente novamente.';
+      err.textContent = '❌ Loja não encontrada. Verifique a cidade e/ou o ID e tente novamente.';
       err.style.display = 'block';
       return;
     }
@@ -423,7 +428,9 @@
 
     resetCopyBtns();
 
+    document.getElementById('id-input').value = '';
     document.getElementById('screen-result').classList.add('active');
+    
   }
 
   function copiarTexto(texto) {
