@@ -86,6 +86,26 @@
       display: block;
     }
 
+    .cidade-select {
+      flex: 1;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 14px 36px 14px 14px;
+      font-size: 16px;
+      font-family: inherit;
+      color: #222;
+      background: #f0f0f0;
+      outline: none;
+      transition: border-color 0.15s;
+      margin-bottom: 6px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8'><path d='M1 1l5 5 5-5' stroke='%231a5bbf' stroke-width='2' fill='none'/></svg>");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+    }
+
     .search-row {
       display: flex;
       gap: 8px;
@@ -282,7 +302,7 @@
     </div>
 
     <label class="search-label" for="id-input">Encontre uma loja pelo ID</label>
-    <select id ="cidade-select">
+    <select class ="cidade-select" id ="cidade-select">
       <option value="Porto Alegre">Porto Alegre</option>
       <option value="Canoas">Canoas</option>
     </select>
