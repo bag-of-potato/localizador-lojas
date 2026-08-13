@@ -362,12 +362,7 @@
 
 
 <script>
-  // ============================================================
-  // LISTA DE LOJAS
-  // Os dados das lojas vêm do arquivo lojas.json (carregado abaixo).
-  // Para adicionar uma loja, edite o lojas.json — não este arquivo.
-  // ============================================================
-
+  //fetch do arquivo de dados JSON lojas
   let lojas = {};
   let lojasCarregadas = false;
   let lojaAtual = null;
@@ -394,7 +389,7 @@
       err.textContent = '⚠️ Não foi possível carregar os dados das lojas. Verifique sua conexão e recarregue a página.';
       err.style.display = 'block';
     });
-
+//função de busca
   function buscar() {
     const cidadeSelect = document.getElementById('cidade-select');
     const idInput = document.getElementById('id-input').value.trim();
@@ -418,9 +413,6 @@
       err.style.display = 'block';
       return;
     }
-
-    // As chaves do JSON são strings, então comparamos como string,
-    // removendo zeros à esquerda (ex: "052" -> "52")
     const cidadeInput = cidadeSelect.value;
     const id = idInput.replace(/^0+/, '') || idInput;
     const loja = lojas[cidadeInput] && lojas[cidadeInput][id];
@@ -431,7 +423,7 @@
       return;
     }
 
-    // Proteção contra dados incompletos no JSON (ex: loja sem telefone)
+    // Proteção contra dados incompletos no JSON
     const nome = loja.nome || 'Nome não informado';
     const end = loja.end || 'Endereço não informado';
     const tel = loja.tel || 'Telefone não informado';
@@ -455,7 +447,7 @@
   }
 
   function copiarTexto(texto) {
-    // Tenta a API moderna de clipboard primeiro
+    // Tenta a API moderna de clipboard
     if (navigator.clipboard && navigator.clipboard.writeText) {
       return navigator.clipboard.writeText(texto).then(() => true).catch(() => copiarFallback(texto));
     }
