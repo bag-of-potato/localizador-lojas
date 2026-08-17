@@ -466,6 +466,10 @@
       const err = document.getElementById('error-msg');
       err.style.display = 'none';
 
+      //limpeza de tela
+      document.getElementById('screen-result').classList.remove('active');
+      document.getElementById('screen-multiple-results').classList.remove('active');
+
       if (!lojasCarregadas) {
         err.textContent = '⏳ Os dados ainda estão carregando, aguarde um instante e tente de novo.';
         err.style.display = 'block';
