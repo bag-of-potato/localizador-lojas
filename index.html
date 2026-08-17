@@ -418,6 +418,13 @@
 
 
   <script>
+    window.addEventListener('load', function(event){
+        if('serviceWorker' in navigator){
+          navigator.serviceWorker.register('sw.js')
+            .then(function(reg) { console.log('SW registrado com sucesso!', reg); })
+            .catch(function(erro) { console.error('Erro ao registrar SW:', erro); })
+        }
+    });
 
     let lojas = {};
     let lojasCarregadas = false;
@@ -498,10 +505,10 @@
 
             const lojaEncontrada = lojasCidade[chave];
 
-
+            const achouEnd = lojaEncontrada.end && normalizar(lojaEncontrada.end).includes(busca);
+            const achouBairro = lojaEncontrada.nome && normalizar(lojaEncontrada.nome).includes(busca)
             if (
-              lojaEncontrada.end &&
-              normalizar(lojaEncontrada.end).includes(busca)
+              achouBairro || achouEnd
             ) {
 
               resultados.push({
@@ -563,20 +570,6 @@
         mostrarResultados(resultados);
         return;
       }
-      if (resultados.length > 1) {
-        mostrarResultados(resultados);
-        return;
-      }
-
-      // Atualiza os links de mapa/waze com o endereço atual
-      const query = encodeURIComponent(end);
-      document.getElementById('btn-maps').href = 'https://www.google.com/maps/search/?api=1&query=' + query;
-      document.getElementById('btn-waze').href = 'https://waze.com/ul?q=' + query + '&navigate=yes';
-
-      resetCopyBtns();
-
-      document.getElementById('id-input').value = '';
-      document.getElementById('screen-result').classList.add('active');
     }
 
     function mostrarResultados(resultados) {
