@@ -3,664 +3,928 @@
     "1": {
       "nome": "Azenha",
       "end": "Av. da Azenha, 875, Porto Alegre",
-      "tel": "(54) 99688-2218"
+      "tel": "(54) 99688-2218",
+      "lat": -30.0528,
+      "lng": -51.2178
     },
     "2": {
       "nome": "Centro Histórico",
       "end": "Rua dos Andradas, 1665, Porto Alegre",
-      "tel": "(51) 3226-3107"
+      "tel": "(51) 3226-3107",
+      "lat": -30.0332211,
+      "lng": -51.2393511
     },
     "4": {
       "nome": "São Geraldo",
       "end": "Av. São Pedro, 549, Porto Alegre",
-      "tel": "(51) 3086-0546"
+      "tel": "(51) 3086-0546",
+      "lat": -30.008606,
+      "lng": -51.2076273
     },
     "6": {
       "nome": "Chácara das Pedras",
       "end": "Avenida João Wallig, 1993, Porto Alegre",
-      "tel": "(51) 99618-5649"
+      "tel": "(51) 99618-5649",
+      "lat": -30.0125643,
+      "lng": -51.1650181
     },
     "8": {
       "nome": "Centro Histórico",
       "end": "Av. Borges de Medeiros, 1151, Porto Alegre",
-      "tel": "(51) 3062-2759"
+      "tel": "(51) 3062-2759",
+      "lat": -30.0482162,
+      "lng": -51.2293459
     },
     "9": {
       "nome": "Centro Histórico",
       "end": "Rua Prof. Annes Dias, 116 - Loja 01, Porto Alegre",
-      "tel": "(51) 3093-0879"
+      "tel": "(51) 3093-0879",
+      "lat": -30.0305376,
+      "lng": -51.2231531
     },
     "10": {
       "nome": "Centro Histórico",
       "end": "Av. Independência, 1271 - Loja 01, Porto Alegre",
-      "tel": "(54) 99662-1906"
+      "tel": "(54) 99662-1906",
+      "lat": -30.0292186,
+      "lng": -51.210896
     },
     "13": {
       "nome": "Camaqua",
       "end": "Rua Camaquã, 651, Porto Alegre",
-      "tel": "(51) 3907-2811"
+      "tel": "(51) 3907-2811",
+      "lat": -30.0998876,
+      "lng": -51.2411261
     },
     "14": {
       "nome": "Cavalhada",
       "end": "Av. Vicente Monteggia, 2837, Porto Alegre",
-      "tel": "(51) 3246-5687"
+      "tel": "(51) 3246-5687",
+      "lat": -30.1133011,
+      "lng": -51.2130968
     },
     "15": {
       "nome": "Centro Histórico",
       "end": "Rua dos Andradas, 985, Porto Alegre",
-      "tel": "(54) 99687-2084"
+      "tel": "(54) 99687-2084",
+      "lat": -30.0307147,
+      "lng": -51.2316015
     },
     "16": {
       "nome": "Cavalhada",
       "end": "Av. da Cavalhada, 2221, Porto Alegre",
-      "tel": "(51) 3012-8118"
+      "tel": "(51) 3012-8118",
+      "lat": -30.1068386,
+      "lng": -51.2282907
     },
     "18": {
       "nome": "Jardim Itu",
       "end": "Rua Adda Mascarenhas de Moraes, 299",
-      "tel": "(54) 99709-1634"
+      "tel": "(54) 99709-1634",
+      "lat":-30.013031609973154,
+      "lng":-51.13600323069664
     },
     "19": {
       "nome": "Mont'Serrat",
       "end": "Rua Anita Garibaldi, 1047, Porto Alegre",
-      "tel": "(51) 3517-6518"
+      "tel": "(51) 3517-6518",
+      "lat": -30.0238899,
+      "lng": -51.1783254
     },
     "20": {
       "nome": "Gloria",
       "end": "Rua Coronel Aparício Borges, 888, Porto Alegre",
-      "tel": "(54) 99695-4036"
+      "tel": "(54) 99695-4036",
+      "lat": -30.0772015,
+      "lng": -51.2063169
     },
     "21": {
       "nome": "Cavalhada",
       "end": "Av. Juca Batista, 510, Porto Alegre",
-      "tel": "(51) 3095-3002"
+      "tel": "(51) 3095-3002",
+      "lat": -30.1384572,
+      "lng": -51.2206228
     },
     "22": {
       "nome": "Petropolis",
       "end": "Av. Protásio Alves, 7401, Porto Alegre",
-      "tel": "(54) 99960-1816"
+      "tel": "(54) 99960-1816",
+      "lat": -30.0408308,
+      "lng": -51.1689846
     },
     "23": {
       "nome": "Cristo Redentor",
       "end": "Av. Assis Brasil, 3277, Porto Alegre",
-      "tel": "(54) 99695-9698"
+      "tel": "(54) 99695-9698",
+      "lat": -29.9842061,
+      "lng": -51.1182213
     },
     "27": {
       "nome": "Aberta dos Morros",
       "end": "Av. Edgar Píres de Castro, 1710, Porto Alegre",
-      "tel": "(54) 99695-8342"
+      "tel": "(54) 99695-8342",
+      "lat": -30.1731111,
+      "lng": -51.1481346
     },
     "29": {
       "nome": "Santana",
       "end": "Rua São Luís, 726, Porto Alegre",
-      "tel": "(54) 99621-8099"
+      "tel": "(54) 99621-8099",
+      "lat": -30.0466356,
+      "lng": -51.2051893
     },
     "30": {
       "nome": "Centro Histórico",
       "end": "Rua dos Andradas, 1179",
-      "tel": "(54) 99244-9029"
+      "tel": "(54) 99244-9029",
+      "lat": -30.0301278,
+      "lng": -51.2298306
     },
     "31": {
       "nome": "Centro Histórico",
       "end": "Av. Sen. Salgado Filho, 16, Porto Alegre",
-      "tel": "(54) 99696-8930"
+      "tel": "(54) 99696-8930",
+      "lat": -30.030627655008445,
+      "lng": -51.2274580067451
     },
     "33": {
       "nome": "Partenon",
       "end": "Av. Bento Gonçalves, 2893, Porto Alegre",
-      "tel": "(51) 3336-5485"
+      "tel": "(51) 3336-5485",
+      "lat": -30.0604519,
+      "lng": -51.1910729
     },
     "35": {
       "nome": "Menino Deus",
       "end": "Av. Getúlio Vargas, 1470, Porto Alegre",
-      "tel": "(54) 99699-1277"
+      "tel": "(54) 99699-1277",
+      "lat": -30.0497154,
+      "lng": -51.2217247
     },
     "36": {
       "nome": "Cavalhada",
       "end": "Av. Juca Batista, 1305, Porto Alegre",
-      "tel": "(51) 3012-9450"
+      "tel": "(51) 3012-9450",
+      "lat": -30.1770194,
+      "lng": -51.1761297
     },
     "38": {
       "nome": "Passo d'Areia",
       "end": "Avenida Assis Brasil, 164, Porto Alegre",
-      "tel": "(54) 99659-3643"
+      "tel": "(54) 99659-3643",
+      "lat": -30.0061148,
+      "lng": -51.1844907
     },
     "41": {
       "nome": "Cristo Redentor",
       "end": "Av. Assis Brasil, 2840, Porto Alegre",
-      "tel": "(51) 4061-9707"
+      "tel": "(51) 4061-9707",
+      "lat": -30.0102678,
+      "lng": -51.1587858
     },
     "42": {
       "nome": "Vila Ipiranga",
       "end": "Av. do Forte, 1968, Porto Alegre",
-      "tel": "(51) 3508-3941"
+      "tel": "(51) 3508-3941",
+      "lat": -30.0119003,
+      "lng": -51.1530981
     },
     "45": {
       "nome": "Belém Novo",
       "end": "Rua Doutor Cecílio Monza, 11050, Porto Alegre",
-      "tel": "(54) 99700-2216"
+      "tel": "(54) 99700-2216",
+      "lat": -30.210946,
+      "lng": -51.1817552
     },
     "46": {
       "nome": "Auxiliadora",
       "end": "Rua Silva Jardim, 115, Porto Alegre",
-      "tel": "(54) 99686-7482"
+      "tel": "(54) 99686-7482",
+      "lat": -30.0275552,
+      "lng": -51.1899036
     },
     "49": {
       "nome": "Moinhos de Vento",
       "end": "Rua 24 de Outubro, 676, Porto Alegre",
-      "tel": "(54) 99703-1287"
+      "tel": "(54) 99703-1287",
+      "lat": -30.0272391,
+      "lng": -51.2040059
     },
     "50": {
       "nome": "Ipanema",
       "end": "Av. Tramandaí, 11, Porto Alegre",
-      "tel": "(54) 99672-8544"
+      "tel": "(54) 99672-8544",
+      "lat": -30.1335884,
+      "lng": -51.2308192
     },
     "51": {
       "nome": "Sarandi",
       "end": "Av. Assis Brasil, 6654, Porto Alegre",
-      "tel": "(51) 3022-5772"
+      "tel": "(51) 3022-5772",
+      "lat": -30.0105727,
+      "lng": -51.157932
     },
     "52": {
       "nome": "Cristal",
       "end": "Av. Wenceslau Escobar, 2409, Porto Alegre",
-      "tel": "(51) 3268-4706"
+      "tel": "(51) 3268-4706",
+      "lat": -30.1007462,
+      "lng": -51.2488144
     },
     "53": {
       "nome": "Restinga",
       "end": "Av. João Antonio Silveira, 1860, Porto Alegre",
-      "tel": "(54) 99927-9572"
+      "tel": "(54) 99927-9572",
+      "lat": -30.15487860191606, 
+      "lng": -51.14054712597991
     },
     "55": {
       "nome": "Independência",
       "end": "Av. Independência, 30, Porto Alegre",
-      "tel": "(51) 3226-4698"
+      "tel": "(51) 3226-4698",
+      "lat": -30.0290871,
+      "lng": -51.2092018
     },
     "56": {
       "nome": "Centro Histórico",
       "end": "Rua Voluntários da Pátria, 9, Porto Alegre",
-      "tel": "(51) 3221-6888"
+      "tel": "(51) 3221-6888",
+      "lat": -30.0176622,
+      "lng": -51.2134014
     },
     "57": {
       "nome": "Restinga",
       "end": "Av. Economista Nilo Wulff, 215, Porto Alegre",
-      "tel": "(51) 3258-7226"
+      "tel": "(51) 3258-7226",
+      "lat": -30.1545731,
+      "lng": -51.1393426
     },
     "58": {
       "nome": "Centro Histórico",
       "end": "Rua Voluntários da Pátria, 387, Porto Alegre",
-      "tel": "(54) 99997-1565"
+      "tel": "(54) 99997-1565",
+      "lat": -29.9881515,
+      "lng": -51.2024717
     },
     "59": {
       "nome": "Centro Histórico",
       "end": "Rua dos Andradas, 1359, Porto Alegre",
-      "tel": "(54) 3228-3173"
+      "tel": "(54) 3228-3173",
+      "lat": -30.0298309,
+      "lng": -51.2273131
     },
     "61": {
       "nome": "Agronomia",
       "end": "Av. Antônio de Carvalho, 1601, Porto Alegre",
-      "tel": "(54) 99962-6390"
+      "tel": "(54) 99962-6390",
+      "lat": -30.0552546,
+      "lng": -51.147076
     },
     "62": {
       "nome": "Menino Deus",
       "end": "Rua josé de Alencar, 215, Porto Alegre",
-      "tel": "(54) 999700-5340"
+      "tel": "(54) 999700-5340",
+      "lat": -30.0595177,
+      "lng": -51.2166569
     },
     "63": {
       "nome": "Lomba do Pinheiro",
       "end": "Estrada João de Oliveira Remião, 6636, Porto Alegre",
-      "tel": "(54) 99665-0027"
+      "tel": "(54) 99665-0027",
+      "lat": -30.0989451,
+      "lng": -51.1260032
     },
     "64": {
       "nome": "Jardim Dona Leopoldina",
       "end": "Estr. Martim Félix Berta, 557, Porto Alegre",
-      "tel": "(51) 3366-3050"
+      "tel": "(51) 3366-3050",
+      "lat": -30.030618,
+      "lng": -51.1123373
     },
     "65": {
       "nome": "Petrópolis",
       "end": "Av. Carlos Gomes, 1723, Porto Alegre",
-      "tel": "(51) 3334-5078"
+      "tel": "(51) 3334-5078",
+      "lat": -30.0256385,
+      "lng": -51.1828111
     },
     "66": {
       "nome": "Rubem Berta",
       "end": "Av. Baltazar de Oliveira Garcia, 3362, Porto Alegre",
-      "tel": "(51) 3279-0969"
+      "tel": "(51) 3279-0969",
+      "lat": -30.0148621,
+      "lng": -51.1119838
     },
     "71": {
       "nome": "Independência",
       "end": "Rua Castro Alves, 667, Porto Alegre",
-      "tel": "(51) 3268-7465"
+      "tel": "(51) 3268-7465",
+      "lat": -30.031015,
+      "lng": -51.2043571
     },
     "72": {
       "nome": "Hospital de Clinicas",
       "end": "Rua Ramiro Barcelos, 2350, Porto Alegre",
-      "tel": "(51) 99763-4890"
+      "tel": "(51) 99763-4890",
+      "lat": -30.0386784,
+      "lng": -51.2066248
     },
     "73": {
       "nome": "Partenon",
       "end": "Av. Bento Gonçalves, 2255, Porto Alegre",
-      "tel": "(54) 99635-6310"
+      "tel": "(54) 99635-6310",
+      "lat": -30.073999,
+      "lng": -51.1370676
     },
     "74": {
       "nome": "Agronomia",
       "end": "Av. Bento Gonçalves, 5117, Porto Alegre",
-      "tel": "(54) 99700-7574"
+      "tel": "(54) 99700-7574",
+      "lat": -30.0760149,
+      "lng": -51.1318791
     },
     "75": {
       "nome": "Hípica",
       "end": "Av. Edgar Pires de Castro, 25, Porto Alegre",
-      "tel": "(51) 99525-7288"
+      "tel": "(51) 99525-7288",
+      "lat": -30.203695,
+      "lng": -51.1167295
     },
     "76": {
       "nome": "Sarandi",
       "end": "Av. Ecoville, 855, Porto Alegre",
-      "tel": "(51) 3340-0061"
+      "tel": "(51) 3340-0061",
+      "lat": -29.9994712,
+      "lng": -51.1227191
     },
     "77": {
       "nome": "Medianeira",
       "end": "Av. Doutor Carlos Barbosa, 761, Porto Alegre",
-      "tel": "(51) 99695-0855"
+      "tel": "(51) 99695-0855",
+      "lat": -30.0630353,
+      "lng": -51.2119699
     },
     "78": {
       "nome": "Mario Quintana",
       "end": "Estr. Martim Félix Berta, 1831, Porto Alegre",
-      "tel": "(51) 99951-0058"
+      "tel": "(51) 99951-0058",
+      "lat": -30.0358616,
+      "lng": -51.1138228
     },
     "80": {
       "nome": "Vila Nova",
       "end": "Av. Monte Cristo, 476, Porto Alegre",
-      "tel": "(51) 3261-3497"
+      "tel": "(51) 3261-3497",
+      "lat": -30.1210948,
+      "lng": -51.2170205
     },
     "81": {
       "nome": "Vila Jardim",
       "end": "Av. Saturnino de Brito, 61, Porto Alegre",
-      "tel": "(51) 99526-4829"
+      "tel": "(51) 99526-4829",
+      "lat": -30.0325998,
+      "lng": -51.1512185
     },
     "82": {
       "nome": "Lomba do Pinheiro",
       "end": "Estr. São Francisco, 10, Porto Alegre",
-      "tel": "(54) 99934-5529"
+      "tel": "(54) 99934-5529",
+      "lat": -30.0917855,
+      "lng": -51.13365
     },
     "83": {
       "nome": "Cristal",
       "end": "Rua Doutor Campos Velho, 950, Porto Alegre",
-      "tel": "(51) 3516-2736"
+      "tel": "(51) 3516-2736",
+      "lat": -30.0916844,
+      "lng": -51.2421727
     },
     "84": {
       "nome": "Cristal",
       "end": "Av. Chui, 380, Porto Alegre",
-      "tel": "(51) 99613-6654"
+      "tel": "(51) 99613-6654",
+      "lat": -30.0814083,
+      "lng": -51.2453135
     },
     "85": {
       "nome": "Hipica",
       "end": "Av. Edgar Pires de Castro, 2745, Porto Alegre",
-      "tel": "(51) 99526-3802"
+      "tel": "(51) 99526-3802",
+      "lat": -30.1576873,
+      "lng": -51.1623713
     },
     "86": {
       "nome": "São João",
       "end": "Av. Assis Brasil, 11, Porto Alegre",
-      "tel": "(51) 99980-6134"
+      "tel": "(51) 99980-6134",
+      "lat": -29.9907131,
+      "lng": -51.1254593
     },
     "87": {
       "nome": "Sarandi",
       "end": "Av. Faria Lobato, 509, Porto Alegre",
-      "tel": "(54) 99920-3630"
+      "tel": "(54) 99920-3630",
+      "lat": -29.98427,
+      "lng": -51.1239445
     },
     "88": {
       "nome": "Vila Jardim",
       "end": "Av. Ipê, 15, Porto Alegre",
-      "tel": "(54) 99911-9186"
+      "tel": "(54) 99911-9186",
+      "lat": -30.0334465,
+      "lng": -51.1531204
     },
     "89": {
       "nome": "Hípica",
       "end": "Av. Juca Batista, 3771, Porto Alegre",
-      "tel": "(51) 3080-1480"
+      "tel": "(51) 3080-1480",
+      "lat": -30.165535,
+      "lng": -51.1822463
     },
     "90": {
       "nome": "Gloria",
       "end": "Av. Prof. Oscar Pereira, 2979, Porto Alegre",
-      "tel": "(51) 99709-5513"
+      "tel": "(51) 99709-5513",
+      "lat": -30.1019891,
+      "lng": -51.1720836
     },
     "91": {
       "nome": "Vila João Pessoa",
       "end": "Rua Tenente Alpoin, 15, Porto Alegre",
-      "tel": "(51) 99640-7290"
+      "tel": "(51) 99640-7290",
+      "lat": -30.0675693,
+      "lng": -51.1752069
     },
     "92": {
       "nome": "Jardim Sabara",
       "end": "Av. Alberto Pasqualini, 1200, Porto Alegre",
-      "tel": "(54) 99708-6174"
+      "tel": "(54) 99708-6174",
+      "lat": -30.0299449,
+      "lng": -51.1423625
     },
     "93": {
       "nome": "Bom Fim",
       "end": "Av. Osvaldo Aranha, 1300, Porto Alegre",
-      "tel": "(51) 99970-0617"
+      "tel": "(51) 99970-0617",
+      "lat": -30.0361977,
+      "lng": -51.2095795
     },
     "94": {
       "nome": "Cristal",
       "end": "Rua Coronel Massot, 666, Porto Alegre",
-      "tel": "(51) 99653-4756"
+      "tel": "(51) 99653-4756",
+      "lat": -30.1007684,
+      "lng": -51.2466601
     },
     "95": {
       "nome": "Humaitá",
       "end": "Av. A. J. Renner, 1221, Porto Alegre",
-      "tel": "(51) 99648-3902"
+      "tel": "(51) 99648-3902",
+      "lat": -29.9794636,
+      "lng": -51.1916945
     },
     "96": {
       "nome": "Menino Deus",
       "end": "Rua Barão do Gravataí, 531, Porto Alegre",
-      "tel": "(51) 99727-1436"
+      "tel": "(51) 99727-1436",
+      "lat": -30.0447382,
+      "lng": -51.2236798
     },
     "97": {
       "nome": "Santana",
       "end": "Rua Gomes Jardim, 261, Porto Alegre",
-      "tel": "(51) 99689-4081"
+      "tel": "(51) 99689-4081",
+      "lat": -30.0467889,
+      "lng": -51.2069211
     },
     "98": {
       "nome": "São Sebastião",
       "end": "Av. Sertório, 6315, Porto Alegre",
-      "tel": "(51) 99954-6645"
+      "tel": "(51) 99954-6645",
+      "lat": -30.0010038,
+      "lng": -51.1297377
     },
     "99": {
       "nome": "Morro Santana",
       "end": "Rua Emílio Keidan, 30, Porto Alegre",
-      "tel": "(51) 99754-3383"
+      "tel": "(51) 99754-3383",
+      "lat": -30.03996155053524,
+      "lng": -51.12491474000836
     },
     "100": {
       "nome": "Rio Branco",
       "end": "Rua Quintino Bocaiúva, 1669, Porto Alegre",
-      "tel": "(51) 99730-8731"
+      "tel": "(51) 99730-8731",
+      "lat": -30.0180865,
+      "lng": -51.1977611
     },
     "101": {
       "nome": "Chapéu do Sol",
       "end": "Av. Juca Batista, 7030, Porto Alegre",
-      "tel": "(51) 99607-8133"
+      "tel": "(51) 99607-8133",
+      "lat": -30.1770194,
+      "lng": -51.1761297
     },
     "102": {
       "nome": "Petrópolis",
       "end": "Av. Protásio Alves, 3919, Porto Alegre",
-      "tel": "(51) 9917-6909"
+      "tel": "(51) 9917-6909",
+      "lat": -30.0408553,
+      "lng": -51.177427
     },
     "103": {
       "nome": "Petrópolis",
       "end": "Av. Ipiranga, 3756, Porto Alegre",
-      "tel": "(51) 99740-5206"
+      "tel": "(51) 99740-5206",
+      "lat": -30.0610951,
+      "lng": -51.1511028
     },
     "104": {
       "nome": "Rio Branco",
       "end": "Av. Protasio Alves, 1094, Porto Alegre",
-      "tel": "(51) 99583-5979"
+      "tel": "(51) 99583-5979",
+      "lat": -30.0408553,
+      "lng": -51.177427
     },
     "105": {
       "nome": "Menino Deus",
       "end": "Rua José de Alencar, 915, Porto Alegre",
-      "tel": "(51) 99985-7231"
+      "tel": "(51) 99985-7231",
+      "lat": -30.0607007,
+      "lng": -51.2210761
     },
     "106": {
       "nome": "Sanatana",
       "end": "Rua Santana, 1340, Porto Alegre",
-      "tel": "(51) 99864-4055"
+      "tel": "(51) 99864-4055",
+      "lat": -30.0522684,
+      "lng": -51.2049131
     },
     "107": {
       "nome": "Petrópolis",
       "end": "Av. Protásio Alves, 3017, Porto Alegre",
-      "tel": "(51) 99903-2113"
+      "tel": "(51) 99903-2113",
+      "lat": -30.0408553,
+      "lng": -51.177427
     },
     "108": {
       "nome": "Três Figueiras",
       "end": "Rua Luiz Voelcker, 281, Porto Alegre",
-      "tel": "(51) 3080-2377"
+      "tel": "(51) 3080-2377",
+      "lat": -30.0369174,
+      "lng": -51.1699131
     },
     "109": {
       "nome": "Rubem Berta",
       "end": "Av. Bernardino Silveira Amorim, 1296, Porto Alegre",
-      "tel": "(51) 99539-8979"
+      "tel": "(51) 99539-8979",
+      "lat": -29.9809238,
+      "lng": -51.1148279
     },
     "110": {
       "nome": "Restinga",
       "end": "Av. Edgar Pires de Castro, 4200, Porto Alegre",
-      "tel": "(51) 99534-4147"
+      "tel": "(51) 99534-4147",
+      "lat": -30.1580421,
+      "lng": -51.1889982
     },
     "111": {
       "nome": "Cristal - Pontal",
       "end": "Av. Padre Cacique, 2893, Porto Alegre",
-      "tel": "(51) 99849-3834"
+      "tel": "(51) 99849-3834",
+      "lat": -30.0806659,
+      "lng": -51.2476248
     },
     "112": {
       "nome": "Floresta",
       "end": "Rua Santo Antônio, 663, Porto Alegre",
-      "tel": "(51) 99797-0382"
+      "tel": "(51) 99797-0382",
+      "lat": -30.0246451,
+      "lng": -51.2161075
     },
     "113": {
       "nome": "São Geraldo",
       "end": "Av. Pernambuco, 2413, Porto Alegre",
-      "tel": "(51) 99569-1334"
+      "tel": "(51) 99569-1334",
+      "lat": -30.0025992,
+      "lng": -51.1983315
     },
     "114": {
       "nome": "Moinhos de Vento",
       "end": "Rua Padre Chagas, 205, Porto Alegre",
-      "tel": "(51) 99627-4380"
+      "tel": "(51) 99627-4380",
+      "lat": -30.0246604,
+      "lng": -51.2029289
     },
     "115": {
       "nome": "Sarandi",
       "end": "Av. Francisco Silveira Bitencourt, 455, Porto Alegre",
-      "tel": "(51) 99614-6795"
+      "tel": "(51) 99614-6795",
+      "lat": -29.9924118,
+      "lng": -51.1148193
     },
     "117": {
       "nome": "Higienópolis",
       "end": "Rua Cel. Feijó, 901, Porto Alegre",
-      "tel": "(51) 99526-1943"
+      "tel": "(51) 99526-1943",
+      "lat": -30.0123111,
+      "lng": -51.1817414
     },
     "119": {
       "nome": "Santana",
       "end": "Rua Vicente da Fontoura, 1441, Porto Alegre",
-      "tel": "(51) 99878-0052"
+      "tel": "(51) 99878-0052",
+      "lat": -30.0363181,
+      "lng": -51.1957656
     },
     "121": {
       "nome": "Sarandi",
       "end": "Av. Assis Brasil, 8489, Porto Alegre",
-      "tel": "(51) 99833-4338"
+      "tel": "(51) 99833-4338",
+      "lat": -30.0093948,
+      "lng": -51.1440544
     },
     "122": {
       "nome": "Medianeira",
       "end": "Rua General Gomes Carneiro, 188, Porto Alegre",
-      "tel": "(51) 99879-0021"
+      "tel": "(51) 99879-0021",
+      "lat": -30.0719433,
+      "lng": -51.2106882
     },
     "124": {
       "nome": "Menino Deus",
       "end": "Rua Costa, 30, Porto Alegre",
-      "tel": "(51) 99877-9794"
+      "tel": "(51) 99877-9794",
+      "lat": -30.0582172,
+      "lng": -51.2292552
     },
     "126": {
       "nome": "Azenha",
       "end": "Av. Ipiranga, 1801, Porto Alegre",
-      "tel": "(51) 99841-7510"
+      "tel": "(51) 99841-7510",
+      "lat": -30.0481191,
+      "lng": -51.2127731
     },
     "129": {
       "nome": "Cristal",
       "end": "Av. Wenceslau Escobar, 1509, Porto Alegre",
-      "tel": "(51) 98060-9157"
+      "tel": "(51) 98060-9157",
+      "lat": -30.1014502,
+      "lng": -51.2499186
     },
     "130": {
       "nome": "Vila Ipiranga",
       "end": "Rua Doutor João Simplício A. de Carvalho, 262, Porto Alegre",
-      "tel": "(51) 99880-2633"
+      "tel": "(51) 99880-2633",
+      "lat": -30.019829699235203,
+      "lng": -51.15461651127464
     },
     "131": {
       "nome": "Rio Branco",
       "end": "Av. Protasio Alves, 290, Porto Alegre",
-      "tel": "(51) 99603-4405"
+      "tel": "(51) 99603-4405",
+      "lat": -30.0408308,
+      "lng": -51.1689846
     }
   },
   "Canoas": {
     "1": {
       "nome": "Centro",
       "end": "Rua Quinze de Janeiro, 176, Canoas",
-      "tel": "(54) 99906-5232"
+      "tel": "(54) 99906-5232",
+      "lat": -29.914858,
+      "lng": -51.1797221
     },
     "2": {
       "nome": "Mathias Velho",
       "end": "Av. Rio Grande do Sul, 303, Canoas",
-      "tel": "(54) 99978-7965"
+      "tel": "(54) 99978-7965",
+      "lat": -29.9025321,
+      "lng": -51.2052096
     },
     "3": {
       "nome": "Centro",
       "end": "Rua Araçá, 367, Canoas",
-      "tel": "(51) 99618-8041"
+      "tel": "(51) 99618-8041",
+      "lat": -29.9201705,
+      "lng": -51.199413
     },
     "4": {
       "nome": "Mato Grande",
       "end": "Rua República, 1289, Canoas",
-      "tel": "(54) 99709-8130"
+      "tel": "(54) 99709-8130",
+      "lat": -29.9138145,
+      "lng": -51.1983496
     },
     "5": {
       "nome": "Centro",
       "end": "Rua Quinze de Janeiro, 200, Canoas",
-      "tel": "(54) 99708-3628"
+      "tel": "(54) 99708-3628",
+      "lat": -29.9166722,
+      "lng": -51.1798579
     },
     "6": {
       "nome": "Igara",
       "end": "Rua Boqueirão, 271, Canoas",
-      "tel": "(54) 99940-7856"
+      "tel": "(54) 99940-7856",
+      "lat": -29.8850747,
+      "lng": -51.1375786
     },
     "7": {
       "nome": "Igara",
       "end": "Rua dos Jasmins, 5, Canoas",
-      "tel": "(51) 99618-9329"
+      "tel": "(51) 99618-9329",
+      "lat": -29.9006125,
+      "lng": -51.1607517
     },
     "8": {
       "nome": "Centro",
       "end": "Rua Mathias Velho, 652, Canoas",
-      "tel": "(54) 99614-5468"
+      "tel": "(54) 99614-5468",
+      "lat": -29.9109595,
+      "lng": -51.1903102
     },
     "9": {
       "nome": "Hosp Nossa Senhora das Graças",
       "end": "Rua Gaspar Lemos, 12, Canoas",
-      "tel": "(54) 99970-9905"
+      "tel": "(54) 99970-9905",
+      "lat": -29.9293871,
+      "lng": -51.1613656
     },
     "10": {
       "nome": "Estância Velha",
       "end": "Av. Boqueirão, 3377, Canoas",
-      "tel": "(54) 99669-9511"
+      "tel": "(54) 99669-9511",
+      "lat": -29.904984,
+      "lng": -51.1612617
     },
     "11": {
       "nome": "Shop Marechal Rondon",
       "end": "Rua Florianópolis, 3761, Canoas",
-      "tel": "(54) 99629-9148"
+      "tel": "(54) 99629-9148",
+      "lat": -29.9078313,
+      "lng": -51.1839471
     },
     "12": {
       "nome": "Rio Branco",
       "end": "Rua José de Alencar, 419, Canoas",
-      "tel": "(54) 99959-9321"
+      "tel": "(54) 99959-9321",
+      "lat": -29.9644,
+      "lng": -51.1895002
     },
     "13": {
       "nome": "Niteroi",
       "end": "Rua Primeiro de Maio, 1100, Canoas",
-      "tel": "(54) 99950-1356"
+      "tel": "(54) 99950-1356",
+      "lat": -29.9515191,
+      "lng": -51.1637646
     },
     "14": {
       "nome": "Centro",
       "end": "Rua Tiradentes, 325, Canoas",
-      "tel": "(54) 99626-3748"
+      "tel": "(54) 99626-3748",
+      "lat": -29.9611358,
+      "lng": -51.1955643
     },
     "15": {
       "nome": "Mathias Velho",
       "end": "Rua Florianópolis, 3761, Canoas",
-      "tel": "(54) 9962-39148"
+      "tel": "(54) 9962-39148",
+      "lat": -29.9078313,
+      "lng": -51.1839471
     },
     "17": {
       "nome": "Centro",
       "end": "Rua Quinze de Janeiro, 129, Canoas",
-      "tel": "(54) 99689-7644"
+      "tel": "(54) 99689-7644",
+      "lat": -29.9141809,
+      "lng": -51.1796993
     },
     "20": {
       "nome": "Niteroi",
       "end": "Rua Lajeado, 1366, Canoas",
-      "tel": "(54) 99654 -9963"
+      "tel": "(54) 99654 -9963",
+      "lat": -29.9618004,
+      "lng": -51.1716386
     },
     "21": {
       "nome": "Mathias Velho",
       "end": "Av. Rio Grande do Sul, 2590, 2590, Canoas",
-      "tel": "(54) 99936-0493"
+      "tel": "(54) 99936-0493",
+      "lat": -29.900693,
+      "lng": -51.227387
     },
     "22": {
       "nome": "Stock Igara",
       "end": "Av. Boqueirão, 2450, Canoas",
-      "tel": "(54) 99923-5981"
+      "tel": "(54) 99923-5981",
+      "lat": -29.9048885,
+      "lng": -51.1612496
     },
     "23": {
       "nome": "São José",
       "end": "Av. Farroupilha, 8001, Canoas",
-      "tel": "(54) 99689-5507"
+      "tel": "(54) 99689-5507",
+      "lat": -29.9073497,
+      "lng": -51.1647842
     },
     "24": {
       "nome": "Centro",
       "end": "Rua dr. Barcelos, 100, Canoas",
-      "tel": "(54) 99989-6149"
+      "tel": "(54) 99989-6149",
+      "lat": -29.9195843,
+      "lng": -51.1851973
     },
     "25": {
       "nome": "Nossa Senhora das Graças",
       "end": "Av. Inconfidencia, 31, Canoas",
-      "tel": "(54) 99967-4877"
+      "tel": "(54) 99967-4877",
+      "lat": -29.9248256,
+      "lng": -51.1754705
     },
     "26": {
       "nome": "Guajuviras",
-      "end": "q ee dois, 11, Canoas",
-      "tel": "(54) 99984-2677"
+      "end": "Av. dezessete De Abril, 369, Canoas",
+      "tel": "(54) 99984-2677",
+      "lat": -29.9022609,
+      "lng": -51.1397265
     },
     "27": {
       "nome": "Olaria",
       "end": "Av. do Nazario, 1721, Canoas",
-      "tel": "(54) 99905-0480"
+      "tel": "(54) 99905-0480",
+      "lat": -29.9066947,
+      "lng": -51.1314478
     },
     "28": {
       "nome": "Merc Marechal Rondon",
       "end": "Av. Inconfidencia, 710, Canoas",
-      "tel": "(54) 99695-7404"
+      "tel": "(54) 99695-7404",
+      "lat": -29.9207138,
+      "lng": -51.1630764
     },
     "30": {
       "nome": "Mathias Velho",
       "end": "Rua Florianópolis, 1621, Canoas",
-      "tel": "(54) 99980-9014"
+      "tel": "(54) 99980-9014",
+      "lat": -29.9073876,
+      "lng": -51.1919712
     },
     "31": {
       "nome": "Guajuviras",
-      "end": "Av. 17 de Abril, S/N, Canoas",
-      "tel": "(51) 99911-0983"
+      "end": "Av. dezessete de Abril, 1866, Canoas",
+      "tel": "(51) 99911-0983",
+      "lat": -29.9012833,
+      "lng": -51.1391418
     },
     "32": {
       "nome": "Nossa Senhora das Graças",
       "end": "Av. Santos Ferreira, 2737, Canoas",
-      "tel": "(51) 99561-5878"
+      "tel": "(51) 99561-5878",
+      "lat": -29.9288648,
+      "lng": -51.1530389
     },
     "33": {
       "nome": "São José",
       "end": "Av. Ramiro Barcelos, 256, Canoas",
-      "tel": "(51) 99833-5386"
+      "tel": "(51) 99833-5386",
+      "lat": -29.8822543,
+      "lng": -51.163811
     },
     "34": {
       "nome": "Marechal Rondon",
       "end": "Av. Getúlio Vargas, 4831, Canoas",
-      "tel": "(51) 99821-3748"
+      "tel": "(51) 99821-3748",
+      "lat": -29.9234557,
+      "lng": -51.1775
     },
     "36": {
       "nome": "Mathias Velho",
       "end": "Av. Rio Grande do Sul, 1521. Canoas",
-      "tel": "(51) 99878-5233"
+      "tel": "(51) 99878-5233",
+      "lat": -29.900693,
+      "lng": -51.227387
     },
     "37": {
       "nome": "Marechal Rondon",
       "end": "Av. Farroupilha, 4811, Canoas",
-      "tel": "(51) 99879-8859"
+      "tel": "(51) 99879-8859",
+      "lat": -29.9073396,
+      "lng": -51.1649349
     },
     "39": {
       "nome": "Igara",
       "end": "Av. Farroupilha, 7095, Canoas",
-      "tel": "(51) 99567-0122"
+      "tel": "(51) 99567-0122",
+      "lat": -29.9073396,
+      "lng": -51.1649349
     },
     "40": {
       "nome": "Mato Grande",
       "end": "Rua Roberto Francisco Behrens, 312, Canoas",
-      "tel": "(51) 99670-2286"
+      "tel": "(51) 99670-2286",
+      "lat": -29.9369883,
+      "lng": -51.1958324
     }
   }
 }

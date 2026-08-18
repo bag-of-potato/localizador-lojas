@@ -143,6 +143,7 @@
 
     .search-btn {
       background: #1a5bbf;
+      margin-bottom: 6px;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -208,8 +209,8 @@
     }
 
     .store-id {
-      font-size: 12px;
-      color: #999;
+      font-size: 15px;
+      color: #696868;
       margin-bottom: 2px;
     }
 
@@ -364,6 +365,7 @@
         <option value="Porto Alegre">Porto Alegre</option>
         <option value="Canoas">Canoas</option>
       </select>
+      <button class="search-btn" onclick="obterLocalizacao()">Encontrar loja mais próxima</button>
       <div class="search-row">
         <input class="search-input" id="id-input" type="text" placeholder="Digite o ID da loja" inputmode="text" />
 
@@ -419,12 +421,99 @@
 
   <script>
     window.addEventListener('load', function(event){
-        if('serviceWorker' in navigator){
-          navigator.serviceWorker.register('SW.js')
-            .then(function(reg) { console.log('SW registrado com sucesso!', reg); })
-            .catch(function(erro) { console.error('Erro ao registrar SW:', erro); })
-        }
+      if('serviceWorker' in navigator){
+        navigator.serviceWorker.register('SW.js')
+          .then(function(reg) { console.log('SW registrado com sucesso!', reg); })
+          .catch(function(erro) { console.error('Erro ao registrar SW:', erro); })
+      } 
     });
+
+    function obterLocalizacao(){
+        if('geolocation' in navigator){
+          navigator.geolocation.getCurrentPosition(
+            function(pos){
+              const userLat = pos.coords.latitude;
+              const userLng = pos.coords.longitude;
+              const cidadeAtual = document.getElementById('cidade-select').value;
+              const lojasCidade = lojas[cidadeAtual];
+
+              let lojaMaisProx = null;
+              let idMaisProx = null;
+              let MenorDist = Infinity;
+              console.log(pos.coords.latitude);
+              console.log(pos.coords.longitude);
+              for(const id in lojasCidade){
+                const loja = lojasCidade[id];
+
+                if(loja.lat && loja.lng){
+                  const dist = calculaDist(userLat, userLng, loja.lat, loja.lng)
+                  if(dist < MenorDist){
+                    MenorDist = dist;
+                    lojaMaisProx = loja;
+                    idMaisProx = id;
+                  }
+                }
+
+              }
+              if(lojaMaisProx){
+                const id = idMaisProx;
+                const loja = lojaMaisProx;
+
+                document.getElementById('screen-result').classList.remove('active');
+                document.getElementById('screen-multiple-results').classList.remove('active');
+                
+                const nome = loja.nome || 'Nome não informado';
+                const end = loja.end || 'Endereço não informado';
+                const tel = loja.tel || 'Telefone não informado';
+
+                lojaAtual = {
+                  id: id,
+                  nome: nome,
+                  end: end,
+                  tel: tel
+                };
+
+                document.getElementById('res-id').textContent = 'ID: ' + id + ' • ' + MenorDist.toFixed(1) + ' km de você';
+                document.getElementById('res-name').textContent = nome;
+                document.getElementById('res-addr').textContent = end;
+                document.getElementById('res-tel').textContent = tel;
+
+                const query = encodeURIComponent(end);
+
+                document.getElementById('btn-maps').href =
+                  'https://www.google.com/maps/search/?api=1&query=' + query;
+
+                document.getElementById('btn-waze').href =
+                  'https://waze.com/ul?q=' + query + '&navigate=yes';
+
+                resetCopyBtns();
+
+                document.getElementById('id-input').value = '';
+
+                document.getElementById('screen-result').classList.add('active');
+                return;
+              }
+            },
+            function(erro){
+              console.error('Erro', erro.message);
+              
+            }
+          );
+        } else {alert('seu navegador não suporta geolocalização.');}
+      }
+
+    function calculaDist(lat1, lon1, lat2, lon2) {
+      const R = 6371; // Raio da Terra em km
+      const dLat = (lat2 - lat1) * Math.PI / 180;
+      const dLon = (lon2 - lon1) * Math.PI / 180;
+      const a =
+        Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+        Math.sin(dLon / 2) * Math.sin(dLon / 2);
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      return R * c; // Devolve a distância em km
+  }
+
 
     let lojas = {};
     let lojasCarregadas = false;
