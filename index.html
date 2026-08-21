@@ -491,6 +491,19 @@
                 document.getElementById('id-input').value = '';
 
                 document.getElementById('screen-result').classList.add('active');
+                
+                const dispositivo = detectarDispositivo();
+
+                registrarAcesso({
+                  cidade: cidadeAtual,
+                  idLoja: id,
+                  nomeLoja: loja.nome,
+                  lat: userLat,
+                  lng: userLng,
+                  origem: 'geolocalizacao',
+                  sistema: dispositivo.sistema,
+                  tipoDispositivo: dispositivo.tipo
+                });
                 return;
               }
             },
@@ -512,8 +525,45 @@
         Math.sin(dLon / 2) * Math.sin(dLon / 2);
       const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
       return R * c; // Devolve a distância em km
-  }
+    }
 
+    function registrarAcesso(dados){
+      fetch('https://script.google.com/macros/s/AKfycbxn-JoXvtii3k_DTvUqrr3knfpPUaiyzXE6fpEKgl6NXDqOkHyMdvbAV4Th9fVRNTdv/exec', {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {'Content-Type': 'text/plain;charset=utf-8'}, 
+        body:  JSON.stringify(dados)
+      }).catch(err => console.error('Falha ao registrar log:', err));
+    }
+
+    function comCoordsOpcional(callback) {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          function(pos) {
+            callback(pos.coords.latitude, pos.coords.longitude);
+          },
+          function() {
+            callback(null, null); // sem permissão ou erro — loga sem coords
+          }
+        );
+      } else {
+        callback(null, null);
+      }
+    }
+    function detectarDispositivo() {
+      const ua = navigator.userAgent;
+
+      let sistema = 'Desconhecido';
+      if (/android/i.test(ua)) sistema = 'Android';
+      else if (/iphone|ipad|ipod/i.test(ua)) sistema = 'iOS';
+      else if (/windows/i.test(ua)) sistema = 'Windows';
+      else if (/macintosh|mac os x/i.test(ua)) sistema = 'macOS';
+      else if (/linux/i.test(ua)) sistema = 'Linux';
+
+      const tipo = /mobile|android|iphone/i.test(ua) ? 'Celular' : 'Computador';
+
+      return { sistema, tipo };
+    }
 
     let lojas = {};
     let lojasCarregadas = false;
@@ -549,6 +599,7 @@
         .replace(/[^a-z0-9]/g, "");
 
     }
+
     function buscar() {
       const cidadeSelect = document.getElementById('cidade-select');
       const idInput = document.getElementById('id-input').value.trim();
@@ -655,8 +706,22 @@
           .getElementById('screen-result')
           .classList
           .add('active');
+          comCoordsOpcional(function(lat, lng) {
+            const dispositivo = detectarDispositivo();
 
-        return;
+            registrarAcesso({
+              cidade: cidadeInput,
+              idLoja: id,
+              nomeLoja: nome,
+              lat: lat,
+              lng: lng,
+              origem: 'busca-manual',
+              sistema: dispositivo.sistema,
+              tipoDispositivo: dispositivo.tipo
+            });
+          });
+
+          return;
       }
 
       if (resultados.length > 1) {
