@@ -428,93 +428,112 @@
       } 
     });
 
-    function obterLocalizacao(){
-        if('geolocation' in navigator){
-          navigator.geolocation.getCurrentPosition(
-            function(pos){
-              const userLat = pos.coords.latitude;
-              const userLng = pos.coords.longitude;
-              const cidadeAtual = document.getElementById('cidade-select').value;
-              const lojasCidade = lojas[cidadeAtual];
+    const CACHE_KEY = 'ultimaPosicao';
+    const CACHE_VALIDADE = 5 * 60 * 1000; // 5 min
 
-              let lojaMaisProx = null;
-              let idMaisProx = null;
-              let MenorDist = Infinity;
-              console.log(pos.coords.latitude);
-              console.log(pos.coords.longitude);
-              for(const id in lojasCidade){
-                const loja = lojasCidade[id];
+    function obterPosicaoCache() {
+      const raw = localStorage.getItem(CACHE_KEY);
+      if (!raw) return null;
+      const cache = JSON.parse(raw);
+      const expirado = Date.now() - cache.timestamp > CACHE_VALIDADE;
+      return expirado ? null : cache.coords;
+    }
 
-                if(loja.lat && loja.lng){
-                  const dist = calculaDist(userLat, userLng, loja.lat, loja.lng)
-                  if(dist < MenorDist){
-                    MenorDist = dist;
-                    lojaMaisProx = loja;
-                    idMaisProx = id;
-                  }
-                }
+    function salvarPosicaoCache(coords) {
+      localStorage.setItem(CACHE_KEY, JSON.stringify({ coords, timestamp: Date.now() }));
+    }
 
-              }
-              if(lojaMaisProx){
-                const id = idMaisProx;
-                const loja = lojaMaisProx;
+        function processarPosicao(userLat, userLng) {
+      const cidadeAtual = document.getElementById('cidade-select').value;
+      const lojasCidade = lojas[cidadeAtual];
 
-                document.getElementById('screen-result').classList.remove('active');
-                document.getElementById('screen-multiple-results').classList.remove('active');
-                
-                const nome = loja.nome || 'Nome não informado';
-                const end = loja.end || 'Endereço não informado';
-                const tel = loja.tel || 'Telefone não informado';
+      let lojaMaisProx = null;
+      let idMaisProx = null;
+      let MenorDist = Infinity;
 
-                lojaAtual = {
-                  id: id,
-                  nome: nome,
-                  end: end,
-                  tel: tel
-                };
-
-                document.getElementById('res-id').textContent = 'ID: ' + id + ' • ' + MenorDist.toFixed(1) + ' km de você';
-                document.getElementById('res-name').textContent = nome;
-                document.getElementById('res-addr').textContent = end;
-                document.getElementById('res-tel').textContent = tel;
-
-                const query = encodeURIComponent(end);
-
-                document.getElementById('btn-maps').href =
-                  'https://www.google.com/maps/search/?api=1&query=' + query;
-
-                document.getElementById('btn-waze').href =
-                  'https://waze.com/ul?q=' + query + '&navigate=yes';
-
-                resetCopyBtns();
-
-                document.getElementById('id-input').value = '';
-
-                document.getElementById('screen-result').classList.add('active');
-                
-                const dispositivo = detectarDispositivo();
-
-                registrarAcesso({
-                  cidade: cidadeAtual,
-                  idLoja: id,
-                  nomeLoja: loja.nome,
-                  lat: userLat,
-                  lng: userLng,
-                  origem: 'geolocalizacao',
-                  sistema: dispositivo.sistema,
-                  tipoDispositivo: dispositivo.tipo
-                });
-                return;
-              }
-            },
-            function(erro){
-              console.error('Erro', erro.message);
-              
-            }
-          );
-        } else {alert('seu navegador não suporta geolocalização.');}
+      for (const id in lojasCidade) {
+        const loja = lojasCidade[id];
+        if (loja.lat && loja.lng) {
+          const dist = calculaDist(userLat, userLng, loja.lat, loja.lng);
+          if (dist < MenorDist) {
+            MenorDist = dist;
+            lojaMaisProx = loja;
+            idMaisProx = id;
+          }
+        }
       }
 
+      if (!lojaMaisProx) return;
+
+      const id = idMaisProx;
+      const loja = lojaMaisProx;
+
+      document.getElementById('screen-result').classList.remove('active');
+      document.getElementById('screen-multiple-results').classList.remove('active');
+
+      const nome = loja.nome || 'Nome não informado';
+      const end = loja.end || 'Endereço não informado';
+      const tel = loja.tel || 'Telefone não informado';
+
+      lojaAtual = { id: id, nome: nome, end: end, tel: tel };
+
+      document.getElementById('res-id').textContent = 'ID: ' + id + ' • ' + MenorDist.toFixed(1) + ' km de você';
+      document.getElementById('res-name').textContent = nome;
+      document.getElementById('res-addr').textContent = end;
+      document.getElementById('res-tel').textContent = tel;
+
+      const query = encodeURIComponent(end);
+      document.getElementById('btn-maps').href = 'https://www.google.com/maps/search/?api=1&query=' + query;
+      document.getElementById('btn-waze').href = 'https://waze.com/ul?q=' + query + '&navigate=yes';
+
+      resetCopyBtns();
+      document.getElementById('id-input').value = '';
+      document.getElementById('screen-result').classList.add('active');
+
+      const dispositivo = detectarDispositivo();
+      registrarAcesso({
+        cidade: cidadeAtual,
+        idLoja: id,
+        nomeLoja: nome,
+        lat: userLat,
+        lng: userLng,
+        origem: 'geolocalizacao',
+        sistema: dispositivo.sistema,
+        tipoDispositivo: dispositivo.tipo
+      });
+    }
+
+    function obterLocalizacao() {
+      const cache = obterPosicaoCache();
+      if (cache) {
+        processarPosicao(cache.lat, cache.lng);
+        return;
+      }
+
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(
+          function (pos) {
+            const userLat = pos.coords.latitude;
+            const userLng = pos.coords.longitude;
+            salvarPosicaoCache({ lat: userLat, lng: userLng });
+            processarPosicao(userLat, userLng);
+          },
+          function (erro) {
+            console.error('Erro', erro.message);
+            const err = document.getElementById('error-msg');
+            err.textContent = '📍 Não conseguimos sua localização. Busque pelo ID ou endereço da loja abaixo.';
+            err.style.display = 'block';
+          },
+          {
+            maximumAge: CACHE_VALIDADE,
+            timeout: 8000
+          }
+        );
+      } else {
+        alert('seu navegador não suporta geolocalização.');
+      }
+    }
+    
     function calculaDist(lat1, lon1, lat2, lon2) {
       const R = 6371; // Raio da Terra em km
       const dLat = (lat2 - lat1) * Math.PI / 180;
