@@ -1,4 +1,4 @@
-const version = 'loc-v1.2';
+const version = 'loc-v1.3';
 const cacheFiles = ['./index.html', './lojas.json', './manifest.json'];
 self.addEventListener('install', function(event){
     event.waitUntil(
